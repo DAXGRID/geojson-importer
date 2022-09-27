@@ -1,0 +1,37 @@
+version: 2.1
+
+executors:
+  dotnet-core-sdk:
+    docker:
+    - image: mcr.microsoft.com/dotnet/sdk:6.0
+      auth:
+        username: $DOCKER_LOGIN
+        password: $DOCKER_ACCESSTOKEN
+
+jobs:
+  build-app:
+    executor: dotnet-core-sdk
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: dotnet build -c Release
+  test-app:
+    executor: dotnet-core-sdk
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: dotnet test
+
+workflows:
+  build-test-upload_image:
+    jobs:
+      - build-app:
+          filters:
+            tags:
+              only: /.*/
+      - test-app:
+          filters:
+            tags:
+              only: /.*/
