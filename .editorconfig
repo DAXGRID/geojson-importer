@@ -1,0 +1,14 @@
+[*.cs]
+
+# CA1303: Do not pass literals as localized parameters
+dotnet_diagnostic.CA1303.severity = none
+
+# CA1848: We disable this since we do not log very much.
+dotnet_diagnostic.CA1848.severity = none
+
+# CA1812: We remove this since we mainly use dependency injection,
+# so a lot of classes might seem that they have not been instantiated.
+dotnet_diagnostic.CA1812.severity = none
+
+# CA1031: We don't care in the specific project
+dotnet_diagnostic.CA1031.severity = none
