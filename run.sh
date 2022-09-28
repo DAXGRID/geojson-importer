@@ -2,4 +2,5 @@
 
 set -e
 
-dotnet run --project ./src/DatafordelerUtil
+cd ./src/DatafordelerUtil
+dotnet run
