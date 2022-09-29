@@ -9,7 +9,7 @@ public sealed class SqlServerDynamicSchemaBuilderTests
     {
         var dynamicTableDescription = new DynamicTableDescription(
             name: "jordstykke",
-            properties: new List<ColumnDescription>
+            columns: new List<DynamicColumnDescription>
             {
                 new("id", ColumnType.String, 255, true),
                 new("forretningshaendelse", ColumnType.String, 255, true),
@@ -18,9 +18,7 @@ public sealed class SqlServerDynamicSchemaBuilderTests
             }
         );
 
-        var dynamicSchemaBuilder = new SqlServerDynamicSchemaBuilder();
-
-        var result = dynamicSchemaBuilder.Create(dynamicTableDescription);
+        var result = SqlServerDynamicSchemaBuilder.Create(dynamicTableDescription);
 
         var expected = @"
 CREATE TABLE [dbo].[jordstykke](

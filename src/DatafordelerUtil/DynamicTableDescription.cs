@@ -5,14 +5,14 @@ internal enum ColumnType
     String,
 }
 
-internal sealed record ColumnDescription
+internal sealed record DynamicColumnDescription
 {
     public string Name { get; set; }
     public ColumnType ColumnType { get; }
     public uint? Length { get; }
     public bool Nullable { get; }
 
-    public ColumnDescription(
+    public DynamicColumnDescription(
         string name,
         ColumnType columnType)
     {
@@ -20,7 +20,7 @@ internal sealed record ColumnDescription
         ColumnType = columnType;
     }
 
-    public ColumnDescription(
+    public DynamicColumnDescription(
         string name,
         ColumnType columnType,
         uint? length)
@@ -30,7 +30,7 @@ internal sealed record ColumnDescription
         Length = length;
     }
 
-    public ColumnDescription(
+    public DynamicColumnDescription(
         string name,
         ColumnType columnType,
         uint? length,
@@ -46,18 +46,13 @@ internal sealed record ColumnDescription
 internal sealed record DynamicTableDescription
 {
     public string Name { get; }
-    public IEnumerable<ColumnDescription> Properties { get; }
+    public IEnumerable<DynamicColumnDescription> Columns { get; }
 
     public DynamicTableDescription(
         string name,
-        IEnumerable<ColumnDescription> properties)
+        IEnumerable<DynamicColumnDescription> columns)
     {
         Name = name;
-        Properties = properties;
+        Columns = columns;
     }
-}
-
-internal interface IDynamicSchemaBuilder
-{
-    string Create(DynamicTableDescription dynamicTableDescription);
 }

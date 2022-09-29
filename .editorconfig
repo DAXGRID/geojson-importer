@@ -12,3 +12,6 @@ dotnet_diagnostic.CA1812.severity = none
 
 # CA1031: We don't care in the specific project
 dotnet_diagnostic.CA1031.severity = none
+
+# CA2100: We don't care since this project is internal only
+dotnet_diagnostic.CA2100.severity = none
