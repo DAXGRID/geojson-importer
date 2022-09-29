@@ -1,4 +1,6 @@
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace DatafordelerUtil;
 
@@ -27,5 +29,6 @@ internal class Startup
             await _datafordelerDatabase.CreateTable(
                 new("", new List<DynamicColumnDescription>())).ConfigureAwait(false);
         }
+
     }
 }
