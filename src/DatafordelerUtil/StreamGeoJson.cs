@@ -1,34 +1,40 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Text.RegularExpressions;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace DatafordelerUtil;
 
 internal sealed record GeoJsonGeometry
 {
+    [JsonPropertyName("type")]
     public string Type { get; }
+
+    [JsonPropertyName("coordinates")]
     public dynamic Coordinates { get; }
 
-    public GeoJsonGeometry(string type, JArray coordinates)
+    [JsonConstructor]
+    public GeoJsonGeometry(string type, dynamic coordinates)
     {
         if (type == "Point")
         {
-            Coordinates = coordinates.ToObject<double[]>()
-                ?? throw new ArgumentException("Could not convert Point.");
+            Coordinates = ((JsonElement)coordinates).Deserialize<double[]>()
+                ?? throw new ArgumentException(
+                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
         }
         else if (type == "LineString")
         {
-            Coordinates = coordinates.ToObject<double[][]>()
-                ?? throw new ArgumentException("Could not convert LineString.");
+            Coordinates = ((JsonElement)coordinates).Deserialize<double[][]>()
+                ?? throw new ArgumentException(
+                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
         }
         else if (type == "Polygon")
         {
-            Coordinates = coordinates.ToObject<double[][][]>()
-                ?? throw new ArgumentException("Could not convert Polygon.");
+            Coordinates = ((JsonElement)coordinates).Deserialize<double[][][]>()
+                ?? throw new ArgumentException(
+                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
         }
         else
         {
-            throw new ArgumentException($"Could not handle type {type}.");
+            throw new ArgumentException($"Could not handle '{type}'.", nameof(type));
         }
 
         Type = type;
@@ -37,13 +43,19 @@ internal sealed record GeoJsonGeometry
 
 internal sealed record GeoJsonFeature
 {
+    [JsonPropertyName("type")]
     public string Type { get; }
-    public Dictionary<string, string?> Properties { get; }
+
+    [JsonPropertyName("properties")]
+    public Dictionary<string, dynamic?> Properties { get; }
+
+    [JsonPropertyName("geometry")]
     public GeoJsonGeometry? Geometry { get; }
 
+    [JsonConstructor]
     public GeoJsonFeature(
         string type,
-        Dictionary<string, string?> properties,
+        Dictionary<string, dynamic?> properties,
         GeoJsonGeometry geometry)
     {
         Type = type;
@@ -54,26 +66,15 @@ internal sealed record GeoJsonFeature
 
 internal static class StreamGeoJson
 {
-    public static IEnumerable<GeoJsonFeature> StreamFeatures(Stream stream)
+    public static IEnumerable<GeoJsonFeature> StreamFeaturesFile(string path)
     {
-        var regex = new Regex(@"features");
-
-        using var streamReader = new StreamReader(stream);
-        using var jsonReader = new JsonTextReader(streamReader);
-
-        var features = jsonReader
-            .SelectTokensWithRegex<GeoJsonFeature[]>(regex)
-            .FirstOrDefault();
-
-        if (features is null)
+        using var sr = new StreamReader(path);
+        string? line;
+        while ((line = sr.ReadLine()) != null)
         {
-            throw new InvalidOperationException(
-                "Could not find 'features' token in stream.");
-        }
-
-        foreach (var feature in features)
-        {
-            yield return feature;
+            yield return JsonSerializer.Deserialize<GeoJsonFeature>(line) ??
+                throw new InvalidOperationException(
+                    $"Could not deserialize {nameof(GeoJsonFeature)}.");
         }
     }
 }

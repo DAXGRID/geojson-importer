@@ -4,16 +4,23 @@ namespace DatafordelerUtil;
 
 internal sealed record ImportSetting
 {
-    [JsonPropertyName("layerName")]
-    public string LayerName { get; }
+    [JsonPropertyName("tableName")]
+    public string TableName { get; }
 
     [JsonPropertyName("filePath")]
     public string FilePath { get; }
 
-    public ImportSetting(string layerName, string filePath)
+    [JsonPropertyName("schemaName")]
+    public string? SchemaName { get; }
+
+    public ImportSetting(
+        string layerName,
+        string filePath,
+        string? schemaName)
     {
-        LayerName = layerName;
+        TableName = layerName;
         FilePath = filePath;
+        SchemaName = schemaName;
     }
 }
 

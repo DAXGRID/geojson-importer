@@ -8,13 +8,14 @@ public sealed class SqlServerDynamicSchemaBuilderTests
     public void Should_create_dynamic_sql_server_schema()
     {
         var dynamicTableDescription = new DynamicTableDescription(
+            schema: "dbo",
             name: "jordstykke",
             columns: new List<DynamicColumnDescription>
             {
-                new("id", ColumnType.String, 255, true),
-                new("forretningshaendelse", ColumnType.String, 255, true),
-                new("senestesaglokalid", ColumnType.String, 255, true),
-                new("forretningsproces", ColumnType.String, 255, true),
+                new("id", ColumnType.String),
+                new("forretningshaendelse", ColumnType.String),
+                new("senestesaglokalid", ColumnType.String),
+                new("forretningsproces", ColumnType.String),
             }
         );
 
@@ -22,10 +23,10 @@ public sealed class SqlServerDynamicSchemaBuilderTests
 
         var expected = @"
 CREATE TABLE [dbo].[jordstykke](
-[id] [varchar](255) NULL,
-[forretningshaendelse] [varchar](255) NULL,
-[senestesaglokalid] [varchar](255) NULL,
-[forretningsproces] [varchar](255) NULL)";
+[id] [nvarchar](n) NULL,
+[forretningshaendelse] [nvarchar](n) NULL,
+[senestesaglokalid] [nvarchar](n) NULL,
+[forretningsproces] [nvarchar](n) NULL)";
 
         // We split and concat to remove newlines and spaces,
         // the reason is that we want the expected to be easier to read,

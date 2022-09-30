@@ -5,11 +5,8 @@ public sealed class StreamGeoJsonTest
     [Fact]
     public void Stream_geojson_returns_geojson_features()
     {
-        using var fileStream = new FileStream(
-            TestUtil.AbsolutePath("Data/jordstykke.geojson"),
-            FileMode.Open);
-
-        var features = StreamGeoJson.StreamFeatures(fileStream).ToList();
+        var filePath = TestUtil.AbsolutePath("Data/jordstykke.geojson");
+        var features = StreamGeoJson.StreamFeaturesFile(filePath).ToList();
 
         features
             .Should()
