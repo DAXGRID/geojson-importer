@@ -24,17 +24,15 @@ internal class Startup
         {
             _logger.LogInformation("Starting import of {TableName}.", import.TableName);
 
-            var tableExists = await _datafordelerDatabase.TableExists(
-                import.TableName, import.SchemaName).ConfigureAwait(false);
-
             var exampleFeature = StreamGeoJson.StreamFeaturesFile(import.FilePath).First();
             var tableDescription = DynamicTableDescriptionFactory.Create(
                 import.SchemaName, import.TableName, exampleFeature);
 
+            var tableExists = await _datafordelerDatabase.TableExists(
+                import.TableName, import.SchemaName).ConfigureAwait(false);
             if (!tableExists)
             {
                 _logger.LogInformation("Creating table {TableName}.", import.TableName);
-
                 await _datafordelerDatabase.CreateTable(tableDescription)
                     .ConfigureAwait(false);
             }

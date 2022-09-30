@@ -23,10 +23,10 @@ public sealed class SqlServerDynamicSchemaBuilderTests
 
         var expected = @"
 CREATE TABLE [dbo].[jordstykke](
-[id] [nvarchar](n) NULL,
-[forretningshaendelse] [nvarchar](n) NULL,
-[senestesaglokalid] [nvarchar](n) NULL,
-[forretningsproces] [nvarchar](n) NULL)";
+[id] [nvarchar](MAX) NULL,
+[forretningshaendelse] [nvarchar](MAX) NULL,
+[senestesaglokalid] [nvarchar](MAX) NULL,
+[forretningsproces] [nvarchar](MAX) NULL)";
 
         // We split and concat to remove newlines and spaces,
         // the reason is that we want the expected to be easier to read,

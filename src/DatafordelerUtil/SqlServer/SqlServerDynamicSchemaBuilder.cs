@@ -9,7 +9,7 @@ internal static class SqlServerDynamicSchemaBuilder
         string.Join(",", desc.Columns.Select(CreateColumn));
 
     private static string CreateColumn(DynamicColumnDescription desc) =>
-        $"[{desc.Name}] [nvarchar](n) NULL";
+        $"[{desc.Name}] [nvarchar](MAX) NULL";
 
     private static string CreateTable(DynamicTableDescription dynamicTableDescription) =>
         $"CREATE TABLE [{dynamicTableDescription.Schema}].[{dynamicTableDescription.Name}]";

@@ -5,6 +5,7 @@ namespace DatafordelerUtil.Tests;
 public sealed class DynamicTableDescriptionFactoryTests
 {
     [Fact]
+    [Trait("Category", "Unit")]
     public void Creates_dynamic_table_description_from_geojson_feature()
     {
         var coordinateJsonDoc = JsonDocument.Parse("[ [ [ 9.6138793, 55.7433699, 0.0 ], [ 9.6128974, 55.7422721, 0.0 ], [ 9.6135094, 55.7420128, 0.0 ], [ 9.614114, 55.741748, 0.0 ], [ 9.614711, 55.7414779, 0.0 ], [ 9.6153002, 55.7412023, 0.0 ], [ 9.6163491, 55.7423193, 0.0 ], [ 9.6162263, 55.742377, 0.0 ], [ 9.6155584, 55.7426627, 0.0 ], [ 9.6152355, 55.7428005, 0.0 ], [ 9.6145223, 55.7431149, 0.0 ], [ 9.6139249, 55.743356, 0.0 ], [ 9.6138793, 55.7433699, 0.0 ] ] ]");

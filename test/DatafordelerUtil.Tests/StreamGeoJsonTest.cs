@@ -3,6 +3,7 @@ namespace DatafordelerUtil.Tests;
 public sealed class StreamGeoJsonTest
 {
     [Fact]
+    [Trait("Category", "Integration")]
     public void Stream_geojson_returns_geojson_features()
     {
         var filePath = TestUtil.AbsolutePath("Data/jordstykke.geojson");
