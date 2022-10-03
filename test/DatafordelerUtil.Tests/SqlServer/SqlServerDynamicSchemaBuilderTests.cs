@@ -16,6 +16,7 @@ public sealed class SqlServerDynamicSchemaBuilderTests
                 new("forretningshaendelse", ColumnType.String),
                 new("senestesaglokalid", ColumnType.String),
                 new("forretningsproces", ColumnType.String),
+                new("coord", ColumnType.Geometry),
             }
         );
 
@@ -26,7 +27,8 @@ CREATE TABLE [dbo].[jordstykke](
 [id] [nvarchar](MAX) NULL,
 [forretningshaendelse] [nvarchar](MAX) NULL,
 [senestesaglokalid] [nvarchar](MAX) NULL,
-[forretningsproces] [nvarchar](MAX) NULL)";
+[forretningsproces] [nvarchar](MAX) NULL,
+[coord] [geometry] NULL)";
 
         // We split and concat to remove newlines and spaces,
         // the reason is that we want the expected to be easier to read,

@@ -3,6 +3,7 @@ namespace DatafordelerUtil;
 internal enum ColumnType
 {
     String,
+    Geometry
 }
 
 internal sealed record DynamicColumnDescription
