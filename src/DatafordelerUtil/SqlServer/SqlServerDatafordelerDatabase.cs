@@ -71,7 +71,6 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         table.TableName = tableName;
 
         var exampleFeature = features.First();
-
         foreach (var property in features.First().Properties)
         {
             // TODO make a cleaner implementation so not all of them are strings. :))
@@ -83,42 +82,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
             table.Columns.Add("coord", typeof(SqlGeometry));
         }
 
-        foreach (var feature in features)
+        foreach (var row in features.Select(x => CreateFeatureRow(table, x)))
         {
-            var row = table.NewRow();
-
-            foreach (var property in feature.Properties)
-            {
-                row[property.Key] = GetDBValue(property.Value);
-            }
-
-            if (feature?.Geometry?.Coordinates is not null)
-            {
-                var coordinates = ((double[][][])feature.Geometry.Coordinates)
-                    .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
-                    .ToArray();
-
-                try
-                {
-                    var polygon = new Polygon(new LinearRing(coordinates))
-                    {
-                        SRID = 25832
-                    };
-
-                    row["coord"] = SqlGeometry.STGeomFromText(
-                        new SqlChars(polygon.AsText()), polygon.SRID);
-                }
-                catch (ArgumentException ex)
-                {
-                    _logger.LogWarning("{Message}", ex.Message);
-                    continue;
-                }
-            }
-            else
-            {
-                row["coord"] = DBNull.Value;
-            }
-
             table.Rows.Add(row);
         }
 
@@ -131,7 +96,46 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);
     }
 
-    private static object GetDBValue(object o)
+    private static DataRow CreateFeatureRow(DataTable table, GeoJsonFeature feature)
+    {
+        var row = table.NewRow();
+
+        foreach (var property in feature.Properties)
+        {
+            row[property.Key] = GetDBValue(property.Value);
+        }
+
+        if (feature?.Geometry?.Coordinates is not null)
+        {
+            var coordinates = ((double[][][])feature.Geometry.Coordinates)
+                .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
+                .ToArray();
+
+            try
+            {
+                var polygon = new Polygon(new LinearRing(coordinates))
+                {
+                    SRID = 25832
+                };
+
+                row["coord"] = SqlGeometry.STGeomFromText(
+                    new SqlChars(polygon.AsText()), polygon.SRID);
+            }
+            catch (ArgumentException)
+            {
+                //_logger.LogWarning("{Message}", ex.Message);
+                row["coord"] = SqlGeometry.Null;
+            }
+        }
+        else
+        {
+            row["coord"] = SqlGeometry.Null;
+        }
+
+        return row;
+    }
+
+    private static object GetDBValue(object? o)
     {
         return o ?? (object)DBNull.Value;
     }

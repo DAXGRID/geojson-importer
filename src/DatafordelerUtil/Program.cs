@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DatafordelerUtil.SqlServer;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Compact;
@@ -40,12 +41,13 @@ internal sealed class Program
             throw new ArgumentException("Could not deserialize appsettings into settings.");
 
         return new ServiceCollection()
-            .AddSingleton<Settings>(settings)
             .AddLogging(logging =>
             {
                 logging.AddSerilog(logger, true);
             })
+            .AddSingleton<Settings>(settings)
             .AddSingleton<Startup>()
+            .AddSingleton<IDatafordelerDatabase, SqlServerDatafordelerDatabase>()
             .BuildServiceProvider();
     }
 }

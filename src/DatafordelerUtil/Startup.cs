@@ -21,12 +21,14 @@ internal class Startup
 
     public async Task StartAsync()
     {
-        var bulkFeatures = new List<GeoJsonFeature>();
         foreach (var import in _settings.Imports)
         {
             _logger.LogInformation("Starting import of {TableName}.", import.TableName);
 
-            var exampleFeature = StreamGeoJson.StreamFeaturesFile(import.FilePath).First();
+            var exampleFeature = await StreamGeoJson
+                .FirstGeoJsonFeatureAsync(import.FilePath)
+                .ConfigureAwait(false);
+
             var tableDescription = DynamicTableDescriptionFactory.Create(
                 import.SchemaName, import.TableName, exampleFeature);
 
@@ -39,37 +41,22 @@ internal class Startup
                     .ConfigureAwait(false);
             }
 
-            foreach (var feature in StreamGeoJson.StreamFeaturesFile(import.FilePath))
+            var bulkTasks = new List<Task>();
+            await foreach (var bulkFeatures in StreamGeoJson.StreamFeaturesFileAsync(
+                               import.FilePath, BulkCount).ConfigureAwait(false))
             {
-                bulkFeatures.Add(feature);
-
-                if (bulkFeatures.Count == BulkCount)
-                {
-                    _logger.LogInformation(
-                        "Bulk inserting {Count} into {TableName}",
-                        BulkCount,
-                        import.TableName);
-
-                    await _datafordelerDatabase
-                        .BulkImportGeoJsonFeatures(import.TableName, bulkFeatures)
-                        .ConfigureAwait(false);
-                    bulkFeatures.Clear();
-                }
-            }
-
-            if (bulkFeatures.Any())
-            {
-                // Insert the remaining
                 _logger.LogInformation(
-                    "Bulk remaining {Count} into {TableName}",
-                    bulkFeatures.Count,
+                    "Bulk inserting {Count} into {TableName}",
+                    bulkFeatures.Count(),
                     import.TableName);
 
-                await _datafordelerDatabase
-                    .BulkImportGeoJsonFeatures(import.TableName, bulkFeatures)
-                    .ConfigureAwait(false);
-                bulkFeatures.Clear();
+                var bulkTask = _datafordelerDatabase
+                    .BulkImportGeoJsonFeatures(import.TableName, bulkFeatures);
+
+                bulkTasks.Add(bulkTask);
             }
+
+            await Task.WhenAll(bulkTasks).ConfigureAwait(false);
         }
     }
 }
