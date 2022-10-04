@@ -105,6 +105,7 @@ public sealed class DynamicTableDescriptionFactoryTests
                 new("strandbeskyttelse_omfang", ColumnType.String),
                 new("strandbeskyttelse_strandbeskyttelsesareal", ColumnType.String),
                 new("stormfaldsnotering", ColumnType.String),
+                new("coord", ColumnType.Geometry)
             });
 
         var result = DynamicTableDescriptionFactory.Create("dbo", "jordstykke", geoJsonFeature);

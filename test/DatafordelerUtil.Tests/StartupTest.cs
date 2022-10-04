@@ -9,7 +9,6 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
     [Trait("Category", "Integration")]
     public async Task Start_insert_process_ms_sql()
     {
-        var logger = new NullLogger<Startup>();
         var settings = new Settings(
             connectionString: MsSqlDatabaseFixture.TestConnectionString,
             imports: new List<ImportSetting>
@@ -20,10 +19,12 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"))
             });
 
-        var database = new SqlServerDatafordelerDatabase(settings);
+        var database = new SqlServerDatafordelerDatabase(
+            settings: settings,
+            logger: new NullLogger<SqlServerDatafordelerDatabase>());
 
         var startup = new Startup(
-            logger: logger,
+            logger: new NullLogger<Startup>(),
             settings: settings,
             datafordelerDatabase: database);
 

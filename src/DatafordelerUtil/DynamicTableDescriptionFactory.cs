@@ -10,12 +10,21 @@ internal static class DynamicTableDescriptionFactory
         return new DynamicTableDescription(
             schema: schema,
             name: tableName,
-            columns: CreateDynamicColumnDescription(geoJsonFeature.Properties));
+            columns: CreateDynamicColumnDescription(geoJsonFeature));
     }
 
     private static IEnumerable<DynamicColumnDescription> CreateDynamicColumnDescription(
-        Dictionary<string, dynamic?> properties)
+        GeoJsonFeature feature)
     {
-        return properties.Select(x => new DynamicColumnDescription(x.Key, ColumnType.String));
+        var properties = feature.Properties
+            .Select(x => new DynamicColumnDescription(x.Key, ColumnType.String));
+
+        if (feature.Geometry is not null)
+        {
+            properties = properties
+                .Append(new DynamicColumnDescription("coord", ColumnType.Geometry));
+        }
+
+        return properties;
     }
 }
