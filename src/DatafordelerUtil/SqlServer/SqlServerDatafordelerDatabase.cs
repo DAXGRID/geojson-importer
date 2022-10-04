@@ -2,7 +2,6 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.SqlServer.Types;
 using NetTopologySuite.Geometries;
-using NetTopologySuite.IO;
 using System.Data;
 using System.Data.SqlTypes;
 
