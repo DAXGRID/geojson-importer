@@ -15,7 +15,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
             {
                 new ImportSetting(
                     schemaName: "dbo",
-                    layerName: "jordstykke",
+                    tableName: "jordstykke",
                     filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"))
             });
 

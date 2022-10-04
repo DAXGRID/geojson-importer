@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+t
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>

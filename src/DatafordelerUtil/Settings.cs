@@ -14,11 +14,11 @@ internal sealed record ImportSetting
     public string? SchemaName { get; }
 
     public ImportSetting(
-        string layerName,
+        string tableName,
         string filePath,
         string? schemaName)
     {
-        TableName = layerName;
+        TableName = tableName;
         FilePath = filePath;
         SchemaName = schemaName;
     }
