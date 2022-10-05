@@ -122,7 +122,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);
     }
 
-    private static DataRow CreateFeatureRow(DataRow row, GeoJsonFeature feature)
+    private DataRow CreateFeatureRow(DataRow row, GeoJsonFeature feature)
     {
         foreach (var property in feature.Properties)
         {
@@ -180,9 +180,9 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
                 }
 
             }
-            catch (ArgumentException)
+            catch (ArgumentException ex)
             {
-                //_logger.LogWarning("{Message}", ex.Message);
+                _logger.LogWarning("{Message}", ex.Message);
                 row["coord"] = SqlGeometry.Null;
             }
         }
