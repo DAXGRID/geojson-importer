@@ -40,6 +40,32 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
     }
 
+    public async Task DeleteTable(string tableName, string? schemaName = null)
+    {
+        var schema = schemaName is not null ? $"[{schemaName}]." : "";
+        var sql = $"DROP TABLE {schema}[{tableName}]";
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        using var cmd = new SqlCommand(sql, connection);
+
+        await connection.OpenAsync().ConfigureAwait(false);
+        await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+    }
+
+    public async Task Merge(
+        DynamicTableDescription target,
+        DynamicTableDescription source)
+    {
+        var sql = SqlServerDynamicMergeBuilder.Build(target, source);
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        using var cmd = new SqlCommand(sql, connection);
+        cmd.CommandTimeout = 60 * 10;
+
+        await connection.OpenAsync().ConfigureAwait(false);
+        await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+    }
+
     public async Task<bool> TableExists(string tableName, string? schemaName)
     {
         var sql = $@"SELECT object_id FROM sys.tables WHERE name = '{tableName}'";
@@ -82,7 +108,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
             table.Columns.Add("coord", typeof(SqlGeometry));
         }
 
-        foreach (var row in features.Select(x => CreateFeatureRow(table, x)))
+        foreach (var row in features.Select(x => CreateFeatureRow(table.NewRow(), x)))
         {
             table.Rows.Add(row);
         }
@@ -96,10 +122,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);
     }
 
-    private static DataRow CreateFeatureRow(DataTable table, GeoJsonFeature feature)
+    private static DataRow CreateFeatureRow(DataRow row, GeoJsonFeature feature)
     {
-        var row = table.NewRow();
-
         foreach (var property in feature.Properties)
         {
             row[property.Key] = GetDBValue(property.Value);

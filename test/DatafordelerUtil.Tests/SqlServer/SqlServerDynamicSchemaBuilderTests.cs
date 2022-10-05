@@ -10,6 +10,7 @@ public sealed class SqlServerDynamicSchemaBuilderTests
         var dynamicTableDescription = new DynamicTableDescription(
             schema: "dbo",
             name: "jordstykke",
+            key: "id",
             columns: new List<DynamicColumnDescription>
             {
                 new("id", ColumnType.String),

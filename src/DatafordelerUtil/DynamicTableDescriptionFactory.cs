@@ -5,10 +5,12 @@ internal static class DynamicTableDescriptionFactory
     public static DynamicTableDescription Create(
         string? schema,
         string tableName,
+        string key,
         GeoJsonFeature geoJsonFeature)
     {
         return new DynamicTableDescription(
             schema: schema,
+            key: key,
             name: tableName,
             columns: CreateDynamicColumnDescription(geoJsonFeature));
     }

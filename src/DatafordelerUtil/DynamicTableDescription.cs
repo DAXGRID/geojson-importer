@@ -8,7 +8,7 @@ internal enum ColumnType
 
 internal sealed record DynamicColumnDescription
 {
-    public string Name { get; set; }
+    public string Name { get; }
     public ColumnType ColumnType { get; }
 
     public DynamicColumnDescription(
@@ -22,17 +22,20 @@ internal sealed record DynamicColumnDescription
 
 internal sealed record DynamicTableDescription
 {
-    public string? Schema { get; }
     public string Name { get; }
+    public string Key { get; }
+    public string? Schema { get; }
     public IEnumerable<DynamicColumnDescription> Columns { get; }
 
     public DynamicTableDescription(
-        string? schema,
         string name,
-        IEnumerable<DynamicColumnDescription> columns)
+        string key,
+        IEnumerable<DynamicColumnDescription> columns,
+        string? schema)
     {
-        Schema = schema;
         Name = name;
+        Key = key;
         Columns = columns;
+        Schema = schema;
     }
 }

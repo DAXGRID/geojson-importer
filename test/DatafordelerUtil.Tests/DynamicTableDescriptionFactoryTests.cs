@@ -63,6 +63,7 @@ public sealed class DynamicTableDescriptionFactoryTests
         var expected = new DynamicTableDescription(
             schema: "dbo",
             name: "jordstykke",
+            key: "id",
             columns: new List<DynamicColumnDescription>
             {
                 new("id", ColumnType.String),
@@ -108,7 +109,11 @@ public sealed class DynamicTableDescriptionFactoryTests
                 new("coord", ColumnType.Geometry)
             });
 
-        var result = DynamicTableDescriptionFactory.Create("dbo", "jordstykke", geoJsonFeature);
+        var result = DynamicTableDescriptionFactory.Create(
+            "dbo",
+            "jordstykke",
+            "id",
+            geoJsonFeature);
 
         result.Should().BeEquivalentTo(expected);
     }
