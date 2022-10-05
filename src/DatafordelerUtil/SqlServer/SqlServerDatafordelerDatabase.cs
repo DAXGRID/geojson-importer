@@ -131,19 +131,54 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
         if (feature?.Geometry?.Coordinates is not null)
         {
-            var coordinates = ((double[][][])feature.Geometry.Coordinates)
-                .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
-                .ToArray();
-
             try
             {
-                var polygon = new Polygon(new LinearRing(coordinates))
+                if (feature.Geometry.Type == "Point")
                 {
-                    SRID = 25832
-                };
+                    var coord = (double[])feature.Geometry.Coordinates;
 
-                row["coord"] = SqlGeometry.STGeomFromText(
-                    new SqlChars(polygon.AsText()), polygon.SRID);
+                    var point = new Point(coord[0], coord[1])
+                    {
+                        SRID = 25832
+                    };
+
+                    row["coord"] = SqlGeometry.STGeomFromText(
+                        new SqlChars(point.AsText()), point.SRID);
+                }
+                else if (feature.Geometry.Type == "LineString")
+                {
+                    var coordinates = ((double[][])feature.Geometry.Coordinates)
+                        .Select(x => new Coordinate(x[0], x[1]))
+                        .ToArray();
+
+                    var lineString = new LineString(coordinates)
+                    {
+                        SRID = 25832
+                    };
+
+                    row["coord"] = SqlGeometry.STGeomFromText(
+                        new SqlChars(lineString.AsText()), lineString.SRID);
+                }
+                else if (feature.Geometry.Type == "Polygon")
+                {
+                    var coordinates = ((double[][][])feature.Geometry.Coordinates)
+                        .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
+                        .ToArray();
+
+                    var polygon = new Polygon(new LinearRing(coordinates))
+                    {
+                        SRID = 25832
+                    };
+
+                    row["coord"] = SqlGeometry.STGeomFromText(
+                        new SqlChars(polygon.AsText()), polygon.SRID);
+                }
+                else
+                {
+                    throw new InvalidOperationException(
+                        $"Cannot handle geomtry of type type {feature.Geometry.Type}");
+                }
+
             }
             catch (ArgumentException)
             {
