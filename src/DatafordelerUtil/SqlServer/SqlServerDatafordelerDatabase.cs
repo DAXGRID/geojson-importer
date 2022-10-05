@@ -176,9 +176,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
                 else
                 {
                     throw new InvalidOperationException(
-                        $"Cannot handle geomtry of type type {feature.Geometry.Type}");
+                        $"Cannot handle geometry of type {feature.Geometry.Type}.");
                 }
-
             }
             catch (ArgumentException ex)
             {
