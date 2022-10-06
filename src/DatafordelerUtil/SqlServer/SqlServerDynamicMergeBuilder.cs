@@ -6,7 +6,6 @@ internal static class SqlServerDynamicMergeBuilder
         DynamicTableDescription target,
         DynamicTableDescription source)
     {
-        // TODO make matching field customizeable
         return @$"
 MERGE [{target.Schema}].[{target.Name}] AS Target
 USING [{source.Schema}].[{source.Name}] AS Source
