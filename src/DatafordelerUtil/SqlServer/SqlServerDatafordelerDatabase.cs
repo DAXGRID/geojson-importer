@@ -1,7 +1,6 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.SqlServer.Types;
-using NetTopologySuite.Geometries;
 using System.Data;
 using System.Data.SqlTypes;
 
@@ -133,51 +132,9 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         {
             try
             {
-                if (feature.Geometry.Type == "Point")
-                {
-                    var coord = (double[])feature.Geometry.Coordinates;
-
-                    var point = new Point(coord[0], coord[1])
-                    {
-                        SRID = 25832
-                    };
-
-                    row["coord"] = SqlGeometry.STGeomFromText(
-                        new SqlChars(point.AsText()), point.SRID);
-                }
-                else if (feature.Geometry.Type == "LineString")
-                {
-                    var coordinates = ((double[][])feature.Geometry.Coordinates)
-                        .Select(x => new Coordinate(x[0], x[1]))
-                        .ToArray();
-
-                    var lineString = new LineString(coordinates)
-                    {
-                        SRID = 25832
-                    };
-
-                    row["coord"] = SqlGeometry.STGeomFromText(
-                        new SqlChars(lineString.AsText()), lineString.SRID);
-                }
-                else if (feature.Geometry.Type == "Polygon")
-                {
-                    var coordinates = ((double[][][])feature.Geometry.Coordinates)
-                        .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
-                        .ToArray();
-
-                    var polygon = new Polygon(new LinearRing(coordinates))
-                    {
-                        SRID = 25832
-                    };
-
-                    row["coord"] = SqlGeometry.STGeomFromText(
-                        new SqlChars(polygon.AsText()), polygon.SRID);
-                }
-                else
-                {
-                    throw new InvalidOperationException(
-                        $"Cannot handle geometry of type {feature.Geometry.Type}.");
-                }
+                row["coord"] = SqlGeometry.STGeomFromText(
+                    new SqlChars(feature.Geometry.AsGeometry().AsText()),
+                    25832);
             }
             catch (ArgumentException ex)
             {

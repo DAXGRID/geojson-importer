@@ -1,4 +1,5 @@
 using DatafordelerUtil.Converter;
+using NetTopologySuite.Geometries;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -11,6 +12,22 @@ internal sealed record GeoJsonGeometry
 
     [JsonPropertyName("coordinates")]
     public dynamic Coordinates { get; }
+
+    public Geometry AsGeometry() => Type switch
+    {
+        "Point" => new Point(((double[])Coordinates)[0], ((double[])Coordinates)[1]),
+        "LineString" => new LineString(
+            ((double[][])Coordinates)
+            .Select(x => new Coordinate(x[0], x[1]))
+            .ToArray()),
+        "Polygon" => new Polygon(
+            new LinearRing(
+                ((double[][][])Coordinates)
+                .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
+                .ToArray())),
+        _ => throw new InvalidOperationException(
+            $"Cannot handle geometry of type {Type}.")
+    };
 
     [JsonConstructor]
     public GeoJsonGeometry(string type, dynamic coordinates)
