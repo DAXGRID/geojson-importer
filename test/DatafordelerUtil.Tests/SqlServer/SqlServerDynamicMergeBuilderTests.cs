@@ -49,11 +49,10 @@ Target.id = Source.id,
 Target.forretningshaendelse = Source.forretningshaendelse,
 Target.senestesaglokalid = Source.senestesaglokalid,
 Target.forretningsproces = Source.forretningsproces,
-Target.coord = Source.coord;";
+Target.coord = Source.coord
+WHEN NOT MATCHED BY Source THEN
+DELETE;";
 
-        // We split and concat to remove newlines and spaces,
-        // the reason is that we want the expected to be easier to read,
-        // but we need it to be one long string in the result.
         result.Should().Be(expected);
     }
 }
