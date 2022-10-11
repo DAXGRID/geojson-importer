@@ -133,7 +133,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
             try
             {
                 row["coord"] = SqlGeometry.STGeomFromText(
-                    new SqlChars(feature.Geometry.AsGeometry().AsText()),
+                    new SqlChars(feature.Geometry.AsText()),
                     25832);
             }
             catch (ArgumentException ex)

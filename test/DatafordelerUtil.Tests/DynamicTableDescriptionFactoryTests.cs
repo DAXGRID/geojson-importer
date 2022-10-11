@@ -1,4 +1,6 @@
-using System.Text.Json;
+using NetTopologySuite.Geometries;
+using NetTopologySuite.IO;
+using Newtonsoft.Json;
 
 namespace DatafordelerUtil.Tests;
 
@@ -8,13 +10,21 @@ public sealed class DynamicTableDescriptionFactoryTests
     [Trait("Category", "Unit")]
     public void Creates_dynamic_table_description_from_geojson_feature()
     {
-        var coordinateJsonDoc = JsonDocument.Parse("[ [ [ 9.6138793, 55.7433699, 0.0 ], [ 9.6128974, 55.7422721, 0.0 ], [ 9.6135094, 55.7420128, 0.0 ], [ 9.614114, 55.741748, 0.0 ], [ 9.614711, 55.7414779, 0.0 ], [ 9.6153002, 55.7412023, 0.0 ], [ 9.6163491, 55.7423193, 0.0 ], [ 9.6162263, 55.742377, 0.0 ], [ 9.6155584, 55.7426627, 0.0 ], [ 9.6152355, 55.7428005, 0.0 ], [ 9.6145223, 55.7431149, 0.0 ], [ 9.6139249, 55.743356, 0.0 ], [ 9.6138793, 55.7433699, 0.0 ] ] ]");
+        var geoJson = "{ \"type\": \"Polygon\", \"coordinates\": [ [ [ 9.6138793, 55.7433699, 0.0 ], [ 9.6128974, 55.7422721, 0.0 ], [ 9.6135094, 55.7420128, 0.0 ], [ 9.614114, 55.741748, 0.0 ], [ 9.614711, 55.7414779, 0.0 ], [ 9.6153002, 55.7412023, 0.0 ], [ 9.6163491, 55.7423193, 0.0 ], [ 9.6162263, 55.742377, 0.0 ], [ 9.6155584, 55.7426627, 0.0 ], [ 9.6152355, 55.7428005, 0.0 ], [ 9.6145223, 55.7431149, 0.0 ], [ 9.6139249, 55.743356, 0.0 ], [ 9.6138793, 55.7433699, 0.0 ] ] ] } }";
+
+        Geometry geometry;
+        var serializer = GeoJsonSerializer.Create();
+        using (var stringReader = new StringReader(geoJson))
+        using (var jsonReader = new JsonTextReader(stringReader))
+        {
+            geometry = serializer.Deserialize<Geometry>(jsonReader);
+        }
 
         var geoJsonFeature = new GeoJsonFeature(
              type: "Feature",
-             properties: new Dictionary<string, dynamic?>
+             properties: new Dictionary<string, string?>
              {
-                {"id", 4909206},
+                {"id", "4909206"},
                 {"forretningshaendelse", "Afledt ændring"},
                 {"senestesaglokalid", "90000424"},
                 {"forretningsproces", "Anden sagskategori"},
@@ -36,7 +46,7 @@ public sealed class DynamicTableDescriptionFactoryTests
                 {"delnummer", null},
                 {"faelleslod", "0"},
                 {"matrikelnummer", "25s"},
-                {"ejerlavskode", 1110252},
+                {"ejerlavskode", "1110252"},
                 {"sognekode", "7973"},
                 {"kommunekode", "0630"},
                 {"regionskode", "1083"},
@@ -55,9 +65,7 @@ public sealed class DynamicTableDescriptionFactoryTests
                 {"strandbeskyttelse_strandbeskyttelsesareal", null},
                 {"stormfaldsnotering", "false"}
              },
-             geometry: new GeoJsonGeometry(
-                 type: "Polygon",
-                 coordinates: coordinateJsonDoc.RootElement)
+             geometry: geometry
          );
 
         var expected = new DynamicTableDescription(

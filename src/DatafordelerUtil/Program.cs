@@ -41,13 +41,13 @@ internal sealed class Program
             throw new ArgumentException("Could not deserialize appsettings into settings.");
 
         return new ServiceCollection()
-            .AddLogging(logging =>
-            {
-                logging.AddSerilog(logger, true);
-            })
-            .AddSingleton<Settings>(settings)
-            .AddSingleton<Startup>()
-            .AddSingleton<IDatafordelerDatabase, SqlServerDatafordelerDatabase>()
-            .BuildServiceProvider();
+           .AddLogging(logging =>
+           {
+               logging.AddSerilog(logger, true);
+           })
+           .AddSingleton<Settings>(settings)
+           .AddSingleton<Startup>()
+           .AddSingleton<IDatafordelerDatabase, SqlServerDatafordelerDatabase>()
+           .BuildServiceProvider();
     }
 }

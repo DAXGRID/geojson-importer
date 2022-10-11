@@ -1,81 +1,26 @@
-using DatafordelerUtil.Converter;
 using NetTopologySuite.Geometries;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using NetTopologySuite.IO.Converters;
+using Newtonsoft.Json;
 
 namespace DatafordelerUtil;
 
-internal sealed record GeoJsonGeometry
-{
-    [JsonPropertyName("type")]
-    public string Type { get; }
-
-    [JsonPropertyName("coordinates")]
-    public dynamic Coordinates { get; }
-
-    public Geometry AsGeometry() => Type switch
-    {
-        "Point" => new Point(((double[])Coordinates)[0], ((double[])Coordinates)[1]),
-        "LineString" => new LineString(
-            ((double[][])Coordinates)
-            .Select(x => new Coordinate(x[0], x[1]))
-            .ToArray()),
-        "Polygon" => new Polygon(
-            new LinearRing(
-                ((double[][][])Coordinates)
-                .SelectMany(x => x.Select(y => new Coordinate(y[0], y[1])))
-                .ToArray())),
-        _ => throw new InvalidOperationException(
-            $"Cannot handle geometry of type {Type}.")
-    };
-
-    [JsonConstructor]
-    public GeoJsonGeometry(string type, dynamic coordinates)
-    {
-        if (type == "Point")
-        {
-            Coordinates = ((JsonElement)coordinates).Deserialize<double[]>()
-                ?? throw new ArgumentException(
-                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
-        }
-        else if (type == "LineString")
-        {
-            Coordinates = ((JsonElement)coordinates).Deserialize<double[][]>()
-                ?? throw new ArgumentException(
-                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
-        }
-        else if (type == "Polygon")
-        {
-            Coordinates = ((JsonElement)coordinates).Deserialize<double[][][]>()
-                ?? throw new ArgumentException(
-                    $"Couldn't deserialize {coordinates}.", nameof(coordinates));
-        }
-        else
-        {
-            throw new ArgumentException($"Could not handle '{type}'.", nameof(type));
-        }
-
-        Type = type;
-    }
-}
-
 internal sealed record GeoJsonFeature
 {
-    [JsonPropertyName("type")]
+    [JsonProperty("type")]
     public string Type { get; }
 
-    [JsonPropertyName("properties")]
-    [JsonConverter(typeof(DictionaryStringObjectJsonConverter))]
-    public Dictionary<string, object?> Properties { get; }
+    [JsonProperty("properties")]
+    public Dictionary<string, string?> Properties { get; }
 
-    [JsonPropertyName("geometry")]
-    public GeoJsonGeometry? Geometry { get; }
+    [JsonProperty("geometry")]
+    [JsonConverter(typeof(GeometryConverter))]
+    public Geometry Geometry { get; }
 
     [JsonConstructor]
     public GeoJsonFeature(
         string type,
-        Dictionary<string, object?> properties,
-        GeoJsonGeometry geometry)
+        Dictionary<string, string?> properties,
+        Geometry geometry)
     {
         Type = type;
         Properties = properties;
@@ -95,7 +40,7 @@ internal static class StreamGeoJson
             throw new InvalidOperationException("Could not get the first line.");
         }
 
-        return JsonSerializer.Deserialize<GeoJsonFeature>(line) ??
+        return JsonConvert.DeserializeObject<GeoJsonFeature>(line) ??
             throw new InvalidOperationException(
                 $"Could not deserialize {nameof(GeoJsonFeature)}.");
     }
@@ -114,7 +59,7 @@ internal static class StreamGeoJson
             {
                 yield return lines
                     .AsParallel()
-                    .Select(x => JsonSerializer.Deserialize<GeoJsonFeature>(x) ??
+                    .Select(x => JsonConvert.DeserializeObject<GeoJsonFeature>(x) ??
                             throw new InvalidOperationException(
                                 $"Could not deserialize {nameof(GeoJsonFeature)}."));
                 lines.Clear();
@@ -123,7 +68,7 @@ internal static class StreamGeoJson
 
         yield return lines
             .AsParallel()
-            .Select(x => JsonSerializer.Deserialize<GeoJsonFeature>(x) ??
+            .Select(x => JsonConvert.DeserializeObject<GeoJsonFeature>(x) ??
                     throw new InvalidOperationException(
                         $"Could not deserialize {nameof(GeoJsonFeature)}."));
     }
