@@ -60,7 +60,10 @@ internal class Startup
             if (temporaryTableExists)
             {
                 _logger.LogInformation("Deleting table {TableName}.", temporaryTableName);
-                await _datafordelerDatabase.DeleteTable(temporaryTableName)
+                await _datafordelerDatabase
+                    .DeleteTable(
+                        temporaryTableDescription.Name,
+                        temporaryTableDescription.Schema)
                     .ConfigureAwait(false);
             }
 
@@ -68,7 +71,6 @@ internal class Startup
             await _datafordelerDatabase.CreateTable(temporaryTableDescription)
                 .ConfigureAwait(false);
 
-            var bulkTasks = new List<Task>();
             await foreach (var bulkFeatures in StreamGeoJson.StreamFeaturesFileAsync(
                                import.FilePath, BulkCount).ConfigureAwait(false))
             {
@@ -77,13 +79,13 @@ internal class Startup
                     bulkFeatures.Count(),
                     temporaryTableName);
 
-                var bulkTask = _datafordelerDatabase
-                    .BulkImportGeoJsonFeatures(temporaryTableName, bulkFeatures);
-
-                bulkTasks.Add(bulkTask);
+                await _datafordelerDatabase
+                    .BulkImportGeoJsonFeatures(
+                        temporaryTableName,
+                        bulkFeatures,
+                        temporaryTableDescription.Schema)
+                    .ConfigureAwait(false);
             }
-
-            await Task.WhenAll(bulkTasks).ConfigureAwait(false);
 
             _logger.LogInformation(
                 "Merging {Target} from {Source}.",

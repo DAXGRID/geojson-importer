@@ -15,7 +15,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
             imports: new List<ImportSetting>
             {
                 new ImportSetting(
-                    schemaName: "dbo",
+                    schemaName: "test_schema",
                     tableName: "jordstykke",
                     keyFieldName: "id",
                     filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"))
@@ -35,7 +35,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
         var columns = await RetrieveAllColumns(
             MsSqlDatabaseFixture.TestConnectionString,
             "jordstykke",
-            "dbo");
+            "test_schema");
 
         // It's important that the count matches exact, so we know all has been inserted.
         columns.Count.Should().Be(1583);
@@ -44,7 +44,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
         var exists = await TableExists(
             MsSqlDatabaseFixture.TestConnectionString,
             "jordstykke_tmp",
-            "dbo"
+            "test_schema"
         );
 
         exists.Should().BeFalse();
@@ -54,7 +54,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
         RetrieveAllColumns(string connectionString, string tableName, string schema)
     {
         using var connection = new SqlConnection(MsSqlDatabaseFixture.TestConnectionString);
-        using var cmd = new SqlCommand($"SELECT * FROM {tableName}", connection);
+        using var cmd = new SqlCommand($"SELECT * FROM [{schema}].[{tableName}]", connection);
 
         var columns = new List<IReadOnlyDictionary<string, object>>();
 

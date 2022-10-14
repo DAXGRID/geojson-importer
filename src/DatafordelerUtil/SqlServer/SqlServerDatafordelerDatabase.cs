@@ -84,7 +84,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
     public async Task BulkImportGeoJsonFeatures(
         string tableName,
-        IEnumerable<GeoJsonFeature> features)
+        IEnumerable<GeoJsonFeature> features,
+        string? schemaName)
     {
         if (features is null || !features.Any())
         {
@@ -115,7 +116,9 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         using var connection = new SqlConnection(_settings.ConnectionString);
 
         using var bulkInsert = new SqlBulkCopy(connection);
-        bulkInsert.DestinationTableName = tableName;
+        bulkInsert.DestinationTableName = schemaName is not null
+            ? $"[{schemaName}].[{tableName}]"
+            : $"[{tableName}]";
 
         await connection.OpenAsync().ConfigureAwait(false);
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);

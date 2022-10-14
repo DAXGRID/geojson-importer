@@ -8,6 +8,7 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
 {
     private const string MasterDatabaseName = "master";
     private const string TestDatabaseName = "test_database";
+    private const string TestDatabaseSchemaName = "test_schema";
 
     public static string MasterConnectionString =>
         CreateConnectionString(MasterDatabaseName);
@@ -16,8 +17,16 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        await DropDatabase(MasterConnectionString, TestDatabaseName).ConfigureAwait(true);
-        await SetupDatabase(MasterConnectionString, TestDatabaseName).ConfigureAwait(false);
+        await DropDatabase(
+            MasterConnectionString,
+            TestDatabaseName)
+            .ConfigureAwait(true);
+
+        await SetupDatabase(
+            MasterConnectionString,
+            TestDatabaseName).ConfigureAwait(false);
+
+        await SetupSchema(TestConnectionString, TestDatabaseSchemaName);
     }
 
     public Task DisposeAsync()
@@ -25,18 +34,33 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
         return Task.CompletedTask;
     }
 
-    private static async Task SetupDatabase(string connectionString, string database)
+    private static async Task SetupDatabase(
+        string connectionString,
+        string database)
     {
-        const string sql = $"CREATE DATABASE {TestDatabaseName}";
+        var createDatabaseSql = $"CREATE DATABASE {database}";
 
         using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync().ConfigureAwait(false);
 
         new Server(new ServerConnection(connection))
-            .ConnectionContext.ExecuteNonQuery(sql);
+            .ConnectionContext.ExecuteNonQuery(createDatabaseSql);
     }
 
-    private static async Task DropDatabase(string connectionString, string database)
+    private static async Task SetupSchema(string connectionString, string schemaName)
+    {
+        var createSchemaSql = $"CREATE SCHEMA {schemaName}";
+
+        using var connection = new SqlConnection(connectionString);
+        await connection.OpenAsync().ConfigureAwait(false);
+
+        new Server(new ServerConnection(connection))
+            .ConnectionContext.ExecuteNonQuery(createSchemaSql);
+    }
+
+    private static async Task DropDatabase(
+        string connectionString,
+        string database)
     {
         var deleteDatabaseSql = $@"
             IF DB_ID('{database}') IS NOT NULL
