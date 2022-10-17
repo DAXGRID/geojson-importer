@@ -15,13 +15,13 @@ internal sealed record GeoJsonFeature
 
     [JsonProperty("geometry")]
     [JsonConverter(typeof(GeometryConverter))]
-    public Geometry Geometry { get; }
+    public Geometry? Geometry { get; }
 
     [JsonConstructor]
     public GeoJsonFeature(
         string type,
         Dictionary<string, object?> properties,
-        Geometry geometry)
+        Geometry? geometry)
     {
         Type = type;
         Properties = properties;

@@ -1,0 +1,2869 @@
+{
+  "type": "FeatureCollection",
+  "name": "postnummer",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::25832" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nr": "0800", "navn": "Høje Taastrup" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "0999", "navn": "København C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1050", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1051", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1052", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1053", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1054", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1055", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1056", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1057", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1058", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1059", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1060", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1061", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1062", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1063", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1064", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1065", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1066", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1067", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1068", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1069", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1070", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1071", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1072", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1073", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1074", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1092", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1093", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1095", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1098", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1100", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1101", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1102", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1103", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1104", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1105", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1106", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1107", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1110", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1111", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1112", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1113", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1114", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1115", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1116", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1117", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1118", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1119", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1120", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1121", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1122", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1123", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1124", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1125", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1126", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1127", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1128", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1129", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1130", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1131", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1140", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1147", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1148", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1150", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1151", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1152", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1153", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1154", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1155", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1156", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1157", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1158", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1159", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1160", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1161", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1162", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1164", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1165", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1166", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1167", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1168", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1169", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1170", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1171", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1172", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1173", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1174", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1175", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1200", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1201", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1202", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1203", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1204", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1205", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1206", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1207", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1208", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1209", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1210", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1211", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1212", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1213", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1214", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1215", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1216", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1217", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1218", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1219", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1220", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1221", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1250", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1251", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1252", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1253", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1254", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1255", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1256", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1257", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1259", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1260", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1261", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1263", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1264", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1265", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1266", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1267", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1268", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1270", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1271", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1300", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1301", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1302", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1303", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1304", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1306", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1307", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1308", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1309", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1310", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1311", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1312", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1313", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1314", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1315", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1316", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1317", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1318", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1319", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1320", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1321", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1322", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1323", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1324", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1325", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1326", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1327", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1328", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1329", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1350", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1352", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1353", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1354", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1355", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1356", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1357", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1358", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1359", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1360", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1361", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1362", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1363", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1364", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1365", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1366", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1367", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1368", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1369", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1370", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1371", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1400", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1401", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1402", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1403", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1406", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1407", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1408", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1409", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1410", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1411", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1412", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1413", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1414", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1415", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1416", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1417", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1418", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1419", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1420", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1421", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1422", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1423", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1424", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1425", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1426", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1427", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1428", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1429", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1430", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1432", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1433", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1434", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1435", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1436", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1437", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1438", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1439", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1440", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1441", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1448", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1450", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1451", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1452", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1453", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1454", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1455", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1456", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1457", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1458", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1459", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1460", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1461", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1462", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1463", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1464", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1465", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1466", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1467", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1468", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1470", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1471", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1472", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1473", "navn": "København K" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1550", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1551", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1552", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1553", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1554", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1555", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1556", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1557", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1558", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1559", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1560", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1561", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1562", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1563", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1564", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1566", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1567", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1568", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1569", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1570", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1571", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1572", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1573", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1574", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1575", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1576", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1577", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1592", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1599", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1600", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1601", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1602", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1603", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1604", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1605", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1606", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1607", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1608", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1609", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1610", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1611", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1612", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1613", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1614", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1615", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1616", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1617", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1618", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1619", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1620", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1621", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1622", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1623", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1624", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1630", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1631", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1632", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1633", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1634", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1635", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1650", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1651", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1652", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1653", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1654", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1655", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1656", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1657", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1658", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1659", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1660", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1661", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1662", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1663", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1664", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1665", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1666", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1667", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1668", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1669", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1670", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1671", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1672", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1673", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1674", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1675", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1676", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1677", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1699", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1700", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1701", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1702", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1703", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1704", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1705", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1706", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1707", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1708", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1709", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1710", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1711", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1712", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1714", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1715", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1716", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1717", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1718", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1719", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1720", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1721", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1722", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1723", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1724", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1725", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1726", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1727", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1728", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1729", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1730", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1731", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1732", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1733", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1734", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1735", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1736", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1737", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1738", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1739", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1749", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1750", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1751", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1752", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1753", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1754", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1755", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1756", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1757", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1758", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1759", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1760", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1761", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1762", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1763", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1764", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1765", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1766", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1770", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1771", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1772", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1773", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1774", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1775", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1777", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1780", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1785", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1786", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1799", "navn": "København V" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1800", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1801", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1802", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1803", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1804", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1805", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1806", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1807", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1808", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1809", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1810", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1811", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1812", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1813", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1814", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1815", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1816", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1817", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1818", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1819", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1820", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1822", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1823", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1824", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1825", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1826", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1827", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1828", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1829", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1850", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1851", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1852", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1853", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1854", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1855", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1856", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1857", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1860", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1861", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1862", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1863", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1864", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1865", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1866", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1867", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1868", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1870", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1871", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1872", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1873", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1874", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1875", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1876", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1877", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1878", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1879", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1900", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1901", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1902", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1903", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1904", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1905", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1906", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1908", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1909", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1910", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1911", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1912", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1913", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1914", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1915", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1916", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1917", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1920", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1921", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1922", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1923", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1924", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1925", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1926", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1927", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1928", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1950", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1951", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1952", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1953", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1954", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1955", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1956", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1957", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1958", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1959", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1960", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1961", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1962", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1963", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1964", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1965", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1966", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1967", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1970", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1971", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1972", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1973", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "1974", "navn": "Frederiksberg C" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2000", "navn": "Frederiksberg" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2100", "navn": "København Ø" }
+    },
+    { "type": "Feature", "properties": { "nr": "2150", "navn": "Nordhavn" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2200", "navn": "København N" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2300", "navn": "København S" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2400", "navn": "København NV" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2450", "navn": "København SV" }
+    },
+    { "type": "Feature", "properties": { "nr": "2500", "navn": "Valby" } },
+    { "type": "Feature", "properties": { "nr": "2600", "navn": "Glostrup" } },
+    { "type": "Feature", "properties": { "nr": "2605", "navn": "Brøndby" } },
+    { "type": "Feature", "properties": { "nr": "2610", "navn": "Rødovre" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2620", "navn": "Albertslund" }
+    },
+    { "type": "Feature", "properties": { "nr": "2625", "navn": "Vallensbæk" } },
+    { "type": "Feature", "properties": { "nr": "2630", "navn": "Taastrup" } },
+    { "type": "Feature", "properties": { "nr": "2635", "navn": "Ishøj" } },
+    { "type": "Feature", "properties": { "nr": "2640", "navn": "Hedehusene" } },
+    { "type": "Feature", "properties": { "nr": "2650", "navn": "Hvidovre" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2660", "navn": "Brøndby Strand" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2665", "navn": "Vallensbæk Strand" }
+    },
+    { "type": "Feature", "properties": { "nr": "2670", "navn": "Greve" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2680", "navn": "Solrød Strand" }
+    },
+    { "type": "Feature", "properties": { "nr": "2690", "navn": "Karlslunde" } },
+    { "type": "Feature", "properties": { "nr": "2700", "navn": "Brønshøj" } },
+    { "type": "Feature", "properties": { "nr": "2720", "navn": "Vanløse" } },
+    { "type": "Feature", "properties": { "nr": "2730", "navn": "Herlev" } },
+    { "type": "Feature", "properties": { "nr": "2740", "navn": "Skovlunde" } },
+    { "type": "Feature", "properties": { "nr": "2750", "navn": "Ballerup" } },
+    { "type": "Feature", "properties": { "nr": "2760", "navn": "Måløv" } },
+    { "type": "Feature", "properties": { "nr": "2765", "navn": "Smørum" } },
+    { "type": "Feature", "properties": { "nr": "2770", "navn": "Kastrup" } },
+    { "type": "Feature", "properties": { "nr": "2791", "navn": "Dragør" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2800", "navn": "Kongens Lyngby" }
+    },
+    { "type": "Feature", "properties": { "nr": "2820", "navn": "Gentofte" } },
+    { "type": "Feature", "properties": { "nr": "2830", "navn": "Virum" } },
+    { "type": "Feature", "properties": { "nr": "2840", "navn": "Holte" } },
+    { "type": "Feature", "properties": { "nr": "2850", "navn": "Nærum" } },
+    { "type": "Feature", "properties": { "nr": "2860", "navn": "Søborg" } },
+    { "type": "Feature", "properties": { "nr": "2870", "navn": "Dyssegård" } },
+    { "type": "Feature", "properties": { "nr": "2880", "navn": "Bagsværd" } },
+    { "type": "Feature", "properties": { "nr": "2900", "navn": "Hellerup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2920", "navn": "Charlottenlund" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2930", "navn": "Klampenborg" }
+    },
+    { "type": "Feature", "properties": { "nr": "2942", "navn": "Skodsborg" } },
+    { "type": "Feature", "properties": { "nr": "2950", "navn": "Vedbæk" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "2960", "navn": "Rungsted Kyst" }
+    },
+    { "type": "Feature", "properties": { "nr": "2970", "navn": "Hørsholm" } },
+    { "type": "Feature", "properties": { "nr": "2980", "navn": "Kokkedal" } },
+    { "type": "Feature", "properties": { "nr": "2990", "navn": "Nivå" } },
+    { "type": "Feature", "properties": { "nr": "3000", "navn": "Helsingør" } },
+    { "type": "Feature", "properties": { "nr": "3050", "navn": "Humlebæk" } },
+    { "type": "Feature", "properties": { "nr": "3060", "navn": "Espergærde" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3070", "navn": "Snekkersten" }
+    },
+    { "type": "Feature", "properties": { "nr": "3080", "navn": "Tikøb" } },
+    { "type": "Feature", "properties": { "nr": "3100", "navn": "Hornbæk" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3120", "navn": "Dronningmølle" }
+    },
+    { "type": "Feature", "properties": { "nr": "3140", "navn": "Ålsgårde" } },
+    { "type": "Feature", "properties": { "nr": "3150", "navn": "Hellebæk" } },
+    { "type": "Feature", "properties": { "nr": "3200", "navn": "Helsinge" } },
+    { "type": "Feature", "properties": { "nr": "3210", "navn": "Vejby" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3220", "navn": "Tisvildeleje" }
+    },
+    { "type": "Feature", "properties": { "nr": "3230", "navn": "Græsted" } },
+    { "type": "Feature", "properties": { "nr": "3250", "navn": "Gilleleje" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3300", "navn": "Frederiksværk" }
+    },
+    { "type": "Feature", "properties": { "nr": "3310", "navn": "Ølsted" } },
+    { "type": "Feature", "properties": { "nr": "3320", "navn": "Skævinge" } },
+    { "type": "Feature", "properties": { "nr": "3330", "navn": "Gørløse" } },
+    { "type": "Feature", "properties": { "nr": "3360", "navn": "Liseleje" } },
+    { "type": "Feature", "properties": { "nr": "3370", "navn": "Melby" } },
+    { "type": "Feature", "properties": { "nr": "3390", "navn": "Hundested" } },
+    { "type": "Feature", "properties": { "nr": "3400", "navn": "Hillerød" } },
+    { "type": "Feature", "properties": { "nr": "3450", "navn": "Allerød" } },
+    { "type": "Feature", "properties": { "nr": "3460", "navn": "Birkerød" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3480", "navn": "Fredensborg" }
+    },
+    { "type": "Feature", "properties": { "nr": "3490", "navn": "Kvistgård" } },
+    { "type": "Feature", "properties": { "nr": "3500", "navn": "Værløse" } },
+    { "type": "Feature", "properties": { "nr": "3520", "navn": "Farum" } },
+    { "type": "Feature", "properties": { "nr": "3540", "navn": "Lynge" } },
+    { "type": "Feature", "properties": { "nr": "3550", "navn": "Slangerup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3600", "navn": "Frederikssund" }
+    },
+    { "type": "Feature", "properties": { "nr": "3630", "navn": "Jægerspris" } },
+    { "type": "Feature", "properties": { "nr": "3650", "navn": "Ølstykke" } },
+    { "type": "Feature", "properties": { "nr": "3660", "navn": "Stenløse" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "3670", "navn": "Veksø Sjælland" }
+    },
+    { "type": "Feature", "properties": { "nr": "3700", "navn": "Rønne" } },
+    { "type": "Feature", "properties": { "nr": "3720", "navn": "Aakirkeby" } },
+    { "type": "Feature", "properties": { "nr": "3730", "navn": "Nexø" } },
+    { "type": "Feature", "properties": { "nr": "3740", "navn": "Svaneke" } },
+    { "type": "Feature", "properties": { "nr": "3751", "navn": "Østermarie" } },
+    { "type": "Feature", "properties": { "nr": "3760", "navn": "Gudhjem" } },
+    { "type": "Feature", "properties": { "nr": "3770", "navn": "Allinge" } },
+    { "type": "Feature", "properties": { "nr": "3782", "navn": "Klemensker" } },
+    { "type": "Feature", "properties": { "nr": "3790", "navn": "Hasle" } },
+    { "type": "Feature", "properties": { "nr": "4000", "navn": "Roskilde" } },
+    { "type": "Feature", "properties": { "nr": "4030", "navn": "Tune" } },
+    { "type": "Feature", "properties": { "nr": "4040", "navn": "Jyllinge" } },
+    { "type": "Feature", "properties": { "nr": "4050", "navn": "Skibby" } },
+    { "type": "Feature", "properties": { "nr": "4060", "navn": "Kirke Såby" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4070", "navn": "Kirke Hyllinge" }
+    },
+    { "type": "Feature", "properties": { "nr": "4100", "navn": "Ringsted" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4130", "navn": "Viby Sjælland" }
+    },
+    { "type": "Feature", "properties": { "nr": "4140", "navn": "Borup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4160", "navn": "Herlufmagle" }
+    },
+    { "type": "Feature", "properties": { "nr": "4171", "navn": "Glumsø" } },
+    { "type": "Feature", "properties": { "nr": "4173", "navn": "Fjenneslev" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4174", "navn": "Jystrup Midtsj" }
+    },
+    { "type": "Feature", "properties": { "nr": "4180", "navn": "Sorø" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4190", "navn": "Munke Bjergby" }
+    },
+    { "type": "Feature", "properties": { "nr": "4200", "navn": "Slagelse" } },
+    { "type": "Feature", "properties": { "nr": "4220", "navn": "Korsør" } },
+    { "type": "Feature", "properties": { "nr": "4230", "navn": "Skælskør" } },
+    { "type": "Feature", "properties": { "nr": "4241", "navn": "Vemmelev" } },
+    { "type": "Feature", "properties": { "nr": "4242", "navn": "Boeslunde" } },
+    { "type": "Feature", "properties": { "nr": "4243", "navn": "Rude" } },
+    { "type": "Feature", "properties": { "nr": "4244", "navn": "Agersø" } },
+    { "type": "Feature", "properties": { "nr": "4245", "navn": "Omø" } },
+    { "type": "Feature", "properties": { "nr": "4250", "navn": "Fuglebjerg" } },
+    { "type": "Feature", "properties": { "nr": "4261", "navn": "Dalmose" } },
+    { "type": "Feature", "properties": { "nr": "4262", "navn": "Sandved" } },
+    { "type": "Feature", "properties": { "nr": "4270", "navn": "Høng" } },
+    { "type": "Feature", "properties": { "nr": "4281", "navn": "Gørlev" } },
+    { "type": "Feature", "properties": { "nr": "4291", "navn": "Ruds Vedby" } },
+    { "type": "Feature", "properties": { "nr": "4293", "navn": "Dianalund" } },
+    { "type": "Feature", "properties": { "nr": "4295", "navn": "Stenlille" } },
+    { "type": "Feature", "properties": { "nr": "4296", "navn": "Nyrup" } },
+    { "type": "Feature", "properties": { "nr": "4300", "navn": "Holbæk" } },
+    { "type": "Feature", "properties": { "nr": "4305", "navn": "Orø" } },
+    { "type": "Feature", "properties": { "nr": "4320", "navn": "Lejre" } },
+    { "type": "Feature", "properties": { "nr": "4330", "navn": "Hvalsø" } },
+    { "type": "Feature", "properties": { "nr": "4340", "navn": "Tølløse" } },
+    { "type": "Feature", "properties": { "nr": "4350", "navn": "Ugerløse" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4360", "navn": "Kirke Eskilstrup" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4370", "navn": "Store Merløse" }
+    },
+    { "type": "Feature", "properties": { "nr": "4390", "navn": "Vipperød" } },
+    { "type": "Feature", "properties": { "nr": "4400", "navn": "Kalundborg" } },
+    { "type": "Feature", "properties": { "nr": "4420", "navn": "Regstrup" } },
+    { "type": "Feature", "properties": { "nr": "4440", "navn": "Mørkøv" } },
+    { "type": "Feature", "properties": { "nr": "4450", "navn": "Jyderup" } },
+    { "type": "Feature", "properties": { "nr": "4460", "navn": "Snertinge" } },
+    { "type": "Feature", "properties": { "nr": "4470", "navn": "Svebølle" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4480", "navn": "Store Fuglede" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4490", "navn": "Jerslev Sjælland" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4500", "navn": "Nykøbing Sj" }
+    },
+    { "type": "Feature", "properties": { "nr": "4520", "navn": "Svinninge" } },
+    { "type": "Feature", "properties": { "nr": "4532", "navn": "Gislinge" } },
+    { "type": "Feature", "properties": { "nr": "4534", "navn": "Hørve" } },
+    { "type": "Feature", "properties": { "nr": "4540", "navn": "Fårevejle" } },
+    { "type": "Feature", "properties": { "nr": "4550", "navn": "Asnæs" } },
+    { "type": "Feature", "properties": { "nr": "4560", "navn": "Vig" } },
+    { "type": "Feature", "properties": { "nr": "4571", "navn": "Grevinge" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4572", "navn": "Nørre Asmindrup" }
+    },
+    { "type": "Feature", "properties": { "nr": "4573", "navn": "Højby" } },
+    { "type": "Feature", "properties": { "nr": "4581", "navn": "Rørvig" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4583", "navn": "Sjællands Odde" }
+    },
+    { "type": "Feature", "properties": { "nr": "4591", "navn": "Føllenslev" } },
+    { "type": "Feature", "properties": { "nr": "4592", "navn": "Sejerø" } },
+    { "type": "Feature", "properties": { "nr": "4593", "navn": "Eskebjerg" } },
+    { "type": "Feature", "properties": { "nr": "4600", "navn": "Køge" } },
+    { "type": "Feature", "properties": { "nr": "4621", "navn": "Gadstrup" } },
+    { "type": "Feature", "properties": { "nr": "4622", "navn": "Havdrup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4623", "navn": "Lille Skensved" }
+    },
+    { "type": "Feature", "properties": { "nr": "4632", "navn": "Bjæverskov" } },
+    { "type": "Feature", "properties": { "nr": "4640", "navn": "Faxe" } },
+    { "type": "Feature", "properties": { "nr": "4652", "navn": "Hårlev" } },
+    { "type": "Feature", "properties": { "nr": "4653", "navn": "Karise" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4654", "navn": "Faxe Ladeplads" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4660", "navn": "Store Heddinge" }
+    },
+    { "type": "Feature", "properties": { "nr": "4671", "navn": "Strøby" } },
+    { "type": "Feature", "properties": { "nr": "4672", "navn": "Klippinge" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4673", "navn": "Rødvig Stevns" }
+    },
+    { "type": "Feature", "properties": { "nr": "4681", "navn": "Herfølge" } },
+    { "type": "Feature", "properties": { "nr": "4682", "navn": "Tureby" } },
+    { "type": "Feature", "properties": { "nr": "4683", "navn": "Rønnede" } },
+    { "type": "Feature", "properties": { "nr": "4684", "navn": "Holmegaard" } },
+    { "type": "Feature", "properties": { "nr": "4690", "navn": "Haslev" } },
+    { "type": "Feature", "properties": { "nr": "4700", "navn": "Næstved" } },
+    { "type": "Feature", "properties": { "nr": "4720", "navn": "Præstø" } },
+    { "type": "Feature", "properties": { "nr": "4733", "navn": "Tappernøje" } },
+    { "type": "Feature", "properties": { "nr": "4735", "navn": "Mern" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4736", "navn": "Karrebæksminde" }
+    },
+    { "type": "Feature", "properties": { "nr": "4750", "navn": "Lundby" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4760", "navn": "Vordingborg" }
+    },
+    { "type": "Feature", "properties": { "nr": "4771", "navn": "Kalvehave" } },
+    { "type": "Feature", "properties": { "nr": "4772", "navn": "Langebæk" } },
+    { "type": "Feature", "properties": { "nr": "4773", "navn": "Stensved" } },
+    { "type": "Feature", "properties": { "nr": "4780", "navn": "Stege" } },
+    { "type": "Feature", "properties": { "nr": "4791", "navn": "Borre" } },
+    { "type": "Feature", "properties": { "nr": "4792", "navn": "Askeby" } },
+    { "type": "Feature", "properties": { "nr": "4793", "navn": "Bogø By" } },
+    { "type": "Feature", "properties": { "nr": "4800", "navn": "Nykøbing F" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4840", "navn": "Nørre Alslev" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4850", "navn": "Stubbekøbing" }
+    },
+    { "type": "Feature", "properties": { "nr": "4862", "navn": "Guldborg" } },
+    { "type": "Feature", "properties": { "nr": "4863", "navn": "Eskilstrup" } },
+    { "type": "Feature", "properties": { "nr": "4871", "navn": "Horbelev" } },
+    { "type": "Feature", "properties": { "nr": "4872", "navn": "Idestrup" } },
+    { "type": "Feature", "properties": { "nr": "4873", "navn": "Væggerløse" } },
+    { "type": "Feature", "properties": { "nr": "4874", "navn": "Gedser" } },
+    { "type": "Feature", "properties": { "nr": "4880", "navn": "Nysted" } },
+    { "type": "Feature", "properties": { "nr": "4891", "navn": "Toreby L" } },
+    { "type": "Feature", "properties": { "nr": "4892", "navn": "Kettinge" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4894", "navn": "Øster Ulslev" }
+    },
+    { "type": "Feature", "properties": { "nr": "4895", "navn": "Errindlev" } },
+    { "type": "Feature", "properties": { "nr": "4900", "navn": "Nakskov" } },
+    { "type": "Feature", "properties": { "nr": "4912", "navn": "Harpelunde" } },
+    { "type": "Feature", "properties": { "nr": "4913", "navn": "Horslunde" } },
+    { "type": "Feature", "properties": { "nr": "4920", "navn": "Søllested" } },
+    { "type": "Feature", "properties": { "nr": "4930", "navn": "Maribo" } },
+    { "type": "Feature", "properties": { "nr": "4941", "navn": "Bandholm" } },
+    { "type": "Feature", "properties": { "nr": "4942", "navn": "Askø" } },
+    { "type": "Feature", "properties": { "nr": "4943", "navn": "Torrig L" } },
+    { "type": "Feature", "properties": { "nr": "4944", "navn": "Fejø" } },
+    { "type": "Feature", "properties": { "nr": "4945", "navn": "Femø" } },
+    { "type": "Feature", "properties": { "nr": "4951", "navn": "Nørreballe" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "4952", "navn": "Stokkemarke" }
+    },
+    { "type": "Feature", "properties": { "nr": "4953", "navn": "Vesterborg" } },
+    { "type": "Feature", "properties": { "nr": "4960", "navn": "Holeby" } },
+    { "type": "Feature", "properties": { "nr": "4970", "navn": "Rødby" } },
+    { "type": "Feature", "properties": { "nr": "4983", "navn": "Dannemare" } },
+    { "type": "Feature", "properties": { "nr": "4990", "navn": "Sakskøbing" } },
+    { "type": "Feature", "properties": { "nr": "5000", "navn": "Odense C" } },
+    { "type": "Feature", "properties": { "nr": "5200", "navn": "Odense V" } },
+    { "type": "Feature", "properties": { "nr": "5210", "navn": "Odense NV" } },
+    { "type": "Feature", "properties": { "nr": "5220", "navn": "Odense SØ" } },
+    { "type": "Feature", "properties": { "nr": "5230", "navn": "Odense M" } },
+    { "type": "Feature", "properties": { "nr": "5240", "navn": "Odense NØ" } },
+    { "type": "Feature", "properties": { "nr": "5250", "navn": "Odense SV" } },
+    { "type": "Feature", "properties": { "nr": "5260", "navn": "Odense S" } },
+    { "type": "Feature", "properties": { "nr": "5270", "navn": "Odense N" } },
+    { "type": "Feature", "properties": { "nr": "5290", "navn": "Marslev" } },
+    { "type": "Feature", "properties": { "nr": "5300", "navn": "Kerteminde" } },
+    { "type": "Feature", "properties": { "nr": "5320", "navn": "Agedrup" } },
+    { "type": "Feature", "properties": { "nr": "5330", "navn": "Munkebo" } },
+    { "type": "Feature", "properties": { "nr": "5350", "navn": "Rynkeby" } },
+    { "type": "Feature", "properties": { "nr": "5370", "navn": "Mesinge" } },
+    { "type": "Feature", "properties": { "nr": "5380", "navn": "Dalby" } },
+    { "type": "Feature", "properties": { "nr": "5390", "navn": "Martofte" } },
+    { "type": "Feature", "properties": { "nr": "5400", "navn": "Bogense" } },
+    { "type": "Feature", "properties": { "nr": "5450", "navn": "Otterup" } },
+    { "type": "Feature", "properties": { "nr": "5462", "navn": "Morud" } },
+    { "type": "Feature", "properties": { "nr": "5463", "navn": "Harndrup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5464", "navn": "Brenderup Fyn" }
+    },
+    { "type": "Feature", "properties": { "nr": "5466", "navn": "Asperup" } },
+    { "type": "Feature", "properties": { "nr": "5471", "navn": "Søndersø" } },
+    { "type": "Feature", "properties": { "nr": "5474", "navn": "Veflinge" } },
+    { "type": "Feature", "properties": { "nr": "5485", "navn": "Skamby" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5491", "navn": "Blommenslyst" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5492", "navn": "Vissenbjerg" }
+    },
+    { "type": "Feature", "properties": { "nr": "5500", "navn": "Middelfart" } },
+    { "type": "Feature", "properties": { "nr": "5540", "navn": "Ullerslev" } },
+    { "type": "Feature", "properties": { "nr": "5550", "navn": "Langeskov" } },
+    { "type": "Feature", "properties": { "nr": "5560", "navn": "Aarup" } },
+    { "type": "Feature", "properties": { "nr": "5580", "navn": "Nørre Aaby" } },
+    { "type": "Feature", "properties": { "nr": "5591", "navn": "Gelsted" } },
+    { "type": "Feature", "properties": { "nr": "5592", "navn": "Ejby" } },
+    { "type": "Feature", "properties": { "nr": "5600", "navn": "Faaborg" } },
+    { "type": "Feature", "properties": { "nr": "5601", "navn": "Lyø" } },
+    { "type": "Feature", "properties": { "nr": "5602", "navn": "Avernakø" } },
+    { "type": "Feature", "properties": { "nr": "5603", "navn": "Bjørnø" } },
+    { "type": "Feature", "properties": { "nr": "5610", "navn": "Assens" } },
+    { "type": "Feature", "properties": { "nr": "5620", "navn": "Glamsbjerg" } },
+    { "type": "Feature", "properties": { "nr": "5631", "navn": "Ebberup" } },
+    { "type": "Feature", "properties": { "nr": "5642", "navn": "Millinge" } },
+    { "type": "Feature", "properties": { "nr": "5672", "navn": "Broby" } },
+    { "type": "Feature", "properties": { "nr": "5683", "navn": "Haarby" } },
+    { "type": "Feature", "properties": { "nr": "5690", "navn": "Tommerup" } },
+    { "type": "Feature", "properties": { "nr": "5700", "navn": "Svendborg" } },
+    { "type": "Feature", "properties": { "nr": "5750", "navn": "Ringe" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5762", "navn": "Vester Skerninge" }
+    },
+    { "type": "Feature", "properties": { "nr": "5771", "navn": "Stenstrup" } },
+    { "type": "Feature", "properties": { "nr": "5772", "navn": "Kværndrup" } },
+    { "type": "Feature", "properties": { "nr": "5792", "navn": "Årslev" } },
+    { "type": "Feature", "properties": { "nr": "5800", "navn": "Nyborg" } },
+    { "type": "Feature", "properties": { "nr": "5853", "navn": "Ørbæk" } },
+    { "type": "Feature", "properties": { "nr": "5854", "navn": "Gislev" } },
+    { "type": "Feature", "properties": { "nr": "5856", "navn": "Ryslinge" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5863", "navn": "Ferritslev Fyn" }
+    },
+    { "type": "Feature", "properties": { "nr": "5871", "navn": "Frørup" } },
+    { "type": "Feature", "properties": { "nr": "5874", "navn": "Hesselager" } },
+    { "type": "Feature", "properties": { "nr": "5881", "navn": "Skårup Fyn" } },
+    { "type": "Feature", "properties": { "nr": "5882", "navn": "Vejstrup" } },
+    { "type": "Feature", "properties": { "nr": "5883", "navn": "Oure" } },
+    { "type": "Feature", "properties": { "nr": "5884", "navn": "Gudme" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "5892", "navn": "Gudbjerg Sydfyn" }
+    },
+    { "type": "Feature", "properties": { "nr": "5900", "navn": "Rudkøbing" } },
+    { "type": "Feature", "properties": { "nr": "5932", "navn": "Humble" } },
+    { "type": "Feature", "properties": { "nr": "5935", "navn": "Bagenkop" } },
+    { "type": "Feature", "properties": { "nr": "5943", "navn": "Strynø" } },
+    { "type": "Feature", "properties": { "nr": "5953", "navn": "Tranekær" } },
+    { "type": "Feature", "properties": { "nr": "5960", "navn": "Marstal" } },
+    { "type": "Feature", "properties": { "nr": "5965", "navn": "Birkholm" } },
+    { "type": "Feature", "properties": { "nr": "5970", "navn": "Ærøskøbing" } },
+    { "type": "Feature", "properties": { "nr": "5985", "navn": "Søby Ærø" } },
+    { "type": "Feature", "properties": { "nr": "6000", "navn": "Kolding" } },
+    { "type": "Feature", "properties": { "nr": "6040", "navn": "Egtved" } },
+    { "type": "Feature", "properties": { "nr": "6051", "navn": "Almind" } },
+    { "type": "Feature", "properties": { "nr": "6052", "navn": "Viuf" } },
+    { "type": "Feature", "properties": { "nr": "6064", "navn": "Jordrup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6070", "navn": "Christiansfeld" }
+    },
+    { "type": "Feature", "properties": { "nr": "6091", "navn": "Bjert" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6092", "navn": "Sønder Stenderup" }
+    },
+    { "type": "Feature", "properties": { "nr": "6093", "navn": "Sjølund" } },
+    { "type": "Feature", "properties": { "nr": "6094", "navn": "Hejls" } },
+    { "type": "Feature", "properties": { "nr": "6100", "navn": "Haderslev" } },
+    { "type": "Feature", "properties": { "nr": "6200", "navn": "Aabenraa" } },
+    { "type": "Feature", "properties": { "nr": "6210", "navn": "Barsø" } },
+    { "type": "Feature", "properties": { "nr": "6230", "navn": "Rødekro" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6240", "navn": "Løgumkloster" }
+    },
+    { "type": "Feature", "properties": { "nr": "6261", "navn": "Bredebro" } },
+    { "type": "Feature", "properties": { "nr": "6270", "navn": "Tønder" } },
+    { "type": "Feature", "properties": { "nr": "6280", "navn": "Højer" } },
+    { "type": "Feature", "properties": { "nr": "6300", "navn": "Gråsten" } },
+    { "type": "Feature", "properties": { "nr": "6310", "navn": "Broager" } },
+    { "type": "Feature", "properties": { "nr": "6320", "navn": "Egernsund" } },
+    { "type": "Feature", "properties": { "nr": "6330", "navn": "Padborg" } },
+    { "type": "Feature", "properties": { "nr": "6340", "navn": "Kruså" } },
+    { "type": "Feature", "properties": { "nr": "6360", "navn": "Tinglev" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6372", "navn": "Bylderup-Bov" }
+    },
+    { "type": "Feature", "properties": { "nr": "6392", "navn": "Bolderslev" } },
+    { "type": "Feature", "properties": { "nr": "6400", "navn": "Sønderborg" } },
+    { "type": "Feature", "properties": { "nr": "6430", "navn": "Nordborg" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6440", "navn": "Augustenborg" }
+    },
+    { "type": "Feature", "properties": { "nr": "6470", "navn": "Sydals" } },
+    { "type": "Feature", "properties": { "nr": "6500", "navn": "Vojens" } },
+    { "type": "Feature", "properties": { "nr": "6510", "navn": "Gram" } },
+    { "type": "Feature", "properties": { "nr": "6520", "navn": "Toftlund" } },
+    { "type": "Feature", "properties": { "nr": "6534", "navn": "Agerskov" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6535", "navn": "Branderup J" }
+    },
+    { "type": "Feature", "properties": { "nr": "6541", "navn": "Bevtoft" } },
+    { "type": "Feature", "properties": { "nr": "6560", "navn": "Sommersted" } },
+    { "type": "Feature", "properties": { "nr": "6580", "navn": "Vamdrup" } },
+    { "type": "Feature", "properties": { "nr": "6600", "navn": "Vejen" } },
+    { "type": "Feature", "properties": { "nr": "6621", "navn": "Gesten" } },
+    { "type": "Feature", "properties": { "nr": "6622", "navn": "Bække" } },
+    { "type": "Feature", "properties": { "nr": "6623", "navn": "Vorbasse" } },
+    { "type": "Feature", "properties": { "nr": "6630", "navn": "Rødding" } },
+    { "type": "Feature", "properties": { "nr": "6640", "navn": "Lunderskov" } },
+    { "type": "Feature", "properties": { "nr": "6650", "navn": "Brørup" } },
+    { "type": "Feature", "properties": { "nr": "6660", "navn": "Lintrup" } },
+    { "type": "Feature", "properties": { "nr": "6670", "navn": "Holsted" } },
+    { "type": "Feature", "properties": { "nr": "6682", "navn": "Hovborg" } },
+    { "type": "Feature", "properties": { "nr": "6683", "navn": "Føvling" } },
+    { "type": "Feature", "properties": { "nr": "6690", "navn": "Gørding" } },
+    { "type": "Feature", "properties": { "nr": "6700", "navn": "Esbjerg" } },
+    { "type": "Feature", "properties": { "nr": "6705", "navn": "Esbjerg Ø" } },
+    { "type": "Feature", "properties": { "nr": "6710", "navn": "Esbjerg V" } },
+    { "type": "Feature", "properties": { "nr": "6715", "navn": "Esbjerg N" } },
+    { "type": "Feature", "properties": { "nr": "6720", "navn": "Fanø" } },
+    { "type": "Feature", "properties": { "nr": "6731", "navn": "Tjæreborg" } },
+    { "type": "Feature", "properties": { "nr": "6740", "navn": "Bramming" } },
+    { "type": "Feature", "properties": { "nr": "6752", "navn": "Glejbjerg" } },
+    { "type": "Feature", "properties": { "nr": "6753", "navn": "Agerbæk" } },
+    { "type": "Feature", "properties": { "nr": "6760", "navn": "Ribe" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6771", "navn": "Gredstedbro" }
+    },
+    { "type": "Feature", "properties": { "nr": "6780", "navn": "Skærbæk" } },
+    { "type": "Feature", "properties": { "nr": "6792", "navn": "Rømø" } },
+    { "type": "Feature", "properties": { "nr": "6800", "navn": "Varde" } },
+    { "type": "Feature", "properties": { "nr": "6818", "navn": "Årre" } },
+    { "type": "Feature", "properties": { "nr": "6823", "navn": "Ansager" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6830", "navn": "Nørre Nebel" }
+    },
+    { "type": "Feature", "properties": { "nr": "6840", "navn": "Oksbøl" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6851", "navn": "Janderup Vestj" }
+    },
+    { "type": "Feature", "properties": { "nr": "6852", "navn": "Billum" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6853", "navn": "Vejers Strand" }
+    },
+    { "type": "Feature", "properties": { "nr": "6854", "navn": "Henne" } },
+    { "type": "Feature", "properties": { "nr": "6855", "navn": "Outrup" } },
+    { "type": "Feature", "properties": { "nr": "6857", "navn": "Blåvand" } },
+    { "type": "Feature", "properties": { "nr": "6862", "navn": "Tistrup" } },
+    { "type": "Feature", "properties": { "nr": "6870", "navn": "Ølgod" } },
+    { "type": "Feature", "properties": { "nr": "6880", "navn": "Tarm" } },
+    { "type": "Feature", "properties": { "nr": "6893", "navn": "Hemmet" } },
+    { "type": "Feature", "properties": { "nr": "6900", "navn": "Skjern" } },
+    { "type": "Feature", "properties": { "nr": "6920", "navn": "Videbæk" } },
+    { "type": "Feature", "properties": { "nr": "6933", "navn": "Kibæk" } },
+    { "type": "Feature", "properties": { "nr": "6940", "navn": "Lem St" } },
+    { "type": "Feature", "properties": { "nr": "6950", "navn": "Ringkøbing" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "6960", "navn": "Hvide Sande" }
+    },
+    { "type": "Feature", "properties": { "nr": "6971", "navn": "Spjald" } },
+    { "type": "Feature", "properties": { "nr": "6973", "navn": "Ørnhøj" } },
+    { "type": "Feature", "properties": { "nr": "6980", "navn": "Tim" } },
+    { "type": "Feature", "properties": { "nr": "6990", "navn": "Ulfborg" } },
+    { "type": "Feature", "properties": { "nr": "7000", "navn": "Fredericia" } },
+    { "type": "Feature", "properties": { "nr": "7080", "navn": "Børkop" } },
+    { "type": "Feature", "properties": { "nr": "7100", "navn": "Vejle" } },
+    { "type": "Feature", "properties": { "nr": "7120", "navn": "Vejle Øst" } },
+    { "type": "Feature", "properties": { "nr": "7130", "navn": "Juelsminde" } },
+    { "type": "Feature", "properties": { "nr": "7140", "navn": "Stouby" } },
+    { "type": "Feature", "properties": { "nr": "7150", "navn": "Barrit" } },
+    { "type": "Feature", "properties": { "nr": "7160", "navn": "Tørring" } },
+    { "type": "Feature", "properties": { "nr": "7171", "navn": "Uldum" } },
+    { "type": "Feature", "properties": { "nr": "7173", "navn": "Vonge" } },
+    { "type": "Feature", "properties": { "nr": "7182", "navn": "Bredsten" } },
+    { "type": "Feature", "properties": { "nr": "7183", "navn": "Randbøl" } },
+    { "type": "Feature", "properties": { "nr": "7184", "navn": "Vandel" } },
+    { "type": "Feature", "properties": { "nr": "7190", "navn": "Billund" } },
+    { "type": "Feature", "properties": { "nr": "7200", "navn": "Grindsted" } },
+    { "type": "Feature", "properties": { "nr": "7250", "navn": "Hejnsvig" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7260", "navn": "Sønder Omme" }
+    },
+    { "type": "Feature", "properties": { "nr": "7270", "navn": "Stakroge" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7280", "navn": "Sønder Felding" }
+    },
+    { "type": "Feature", "properties": { "nr": "7300", "navn": "Jelling" } },
+    { "type": "Feature", "properties": { "nr": "7321", "navn": "Gadbjerg" } },
+    { "type": "Feature", "properties": { "nr": "7323", "navn": "Give" } },
+    { "type": "Feature", "properties": { "nr": "7330", "navn": "Brande" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7361", "navn": "Ejstrupholm" }
+    },
+    { "type": "Feature", "properties": { "nr": "7362", "navn": "Hampen" } },
+    { "type": "Feature", "properties": { "nr": "7400", "navn": "Herning" } },
+    { "type": "Feature", "properties": { "nr": "7430", "navn": "Ikast" } },
+    { "type": "Feature", "properties": { "nr": "7441", "navn": "Bording" } },
+    { "type": "Feature", "properties": { "nr": "7442", "navn": "Engesvang" } },
+    { "type": "Feature", "properties": { "nr": "7451", "navn": "Sunds" } },
+    { "type": "Feature", "properties": { "nr": "7470", "navn": "Karup J" } },
+    { "type": "Feature", "properties": { "nr": "7480", "navn": "Vildbjerg" } },
+    { "type": "Feature", "properties": { "nr": "7490", "navn": "Aulum" } },
+    { "type": "Feature", "properties": { "nr": "7500", "navn": "Holstebro" } },
+    { "type": "Feature", "properties": { "nr": "7540", "navn": "Haderup" } },
+    { "type": "Feature", "properties": { "nr": "7550", "navn": "Sørvad" } },
+    { "type": "Feature", "properties": { "nr": "7560", "navn": "Hjerm" } },
+    { "type": "Feature", "properties": { "nr": "7570", "navn": "Vemb" } },
+    { "type": "Feature", "properties": { "nr": "7600", "navn": "Struer" } },
+    { "type": "Feature", "properties": { "nr": "7620", "navn": "Lemvig" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7650", "navn": "Bøvlingbjerg" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7660", "navn": "Bækmarksbro" }
+    },
+    { "type": "Feature", "properties": { "nr": "7673", "navn": "Harboøre" } },
+    { "type": "Feature", "properties": { "nr": "7680", "navn": "Thyborøn" } },
+    { "type": "Feature", "properties": { "nr": "7700", "navn": "Thisted" } },
+    { "type": "Feature", "properties": { "nr": "7730", "navn": "Hanstholm" } },
+    { "type": "Feature", "properties": { "nr": "7741", "navn": "Frøstrup" } },
+    { "type": "Feature", "properties": { "nr": "7742", "navn": "Vesløs" } },
+    { "type": "Feature", "properties": { "nr": "7752", "navn": "Snedsted" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7755", "navn": "Bedsted Thy" }
+    },
+    { "type": "Feature", "properties": { "nr": "7760", "navn": "Hurup Thy" } },
+    { "type": "Feature", "properties": { "nr": "7770", "navn": "Vestervig" } },
+    { "type": "Feature", "properties": { "nr": "7790", "navn": "Thyholm" } },
+    { "type": "Feature", "properties": { "nr": "7800", "navn": "Skive" } },
+    { "type": "Feature", "properties": { "nr": "7830", "navn": "Vinderup" } },
+    { "type": "Feature", "properties": { "nr": "7840", "navn": "Højslev" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7850", "navn": "Stoholm Jyll" }
+    },
+    { "type": "Feature", "properties": { "nr": "7860", "navn": "Spøttrup" } },
+    { "type": "Feature", "properties": { "nr": "7870", "navn": "Roslev" } },
+    { "type": "Feature", "properties": { "nr": "7884", "navn": "Fur" } },
+    { "type": "Feature", "properties": { "nr": "7900", "navn": "Nykøbing M" } },
+    { "type": "Feature", "properties": { "nr": "7950", "navn": "Erslev" } },
+    { "type": "Feature", "properties": { "nr": "7960", "navn": "Karby" } },
+    { "type": "Feature", "properties": { "nr": "7970", "navn": "Redsted M" } },
+    { "type": "Feature", "properties": { "nr": "7980", "navn": "Vils" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "7990", "navn": "Øster Assels" }
+    },
+    { "type": "Feature", "properties": { "nr": "8000", "navn": "Aarhus C" } },
+    { "type": "Feature", "properties": { "nr": "8200", "navn": "Aarhus N" } },
+    { "type": "Feature", "properties": { "nr": "8210", "navn": "Aarhus V" } },
+    { "type": "Feature", "properties": { "nr": "8220", "navn": "Brabrand" } },
+    { "type": "Feature", "properties": { "nr": "8230", "navn": "Åbyhøj" } },
+    { "type": "Feature", "properties": { "nr": "8240", "navn": "Risskov" } },
+    { "type": "Feature", "properties": { "nr": "8250", "navn": "Egå" } },
+    { "type": "Feature", "properties": { "nr": "8260", "navn": "Viby J" } },
+    { "type": "Feature", "properties": { "nr": "8270", "navn": "Højbjerg" } },
+    { "type": "Feature", "properties": { "nr": "8300", "navn": "Odder" } },
+    { "type": "Feature", "properties": { "nr": "8305", "navn": "Samsø" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "8310", "navn": "Tranbjerg J" }
+    },
+    { "type": "Feature", "properties": { "nr": "8320", "navn": "Mårslet" } },
+    { "type": "Feature", "properties": { "nr": "8330", "navn": "Beder" } },
+    { "type": "Feature", "properties": { "nr": "8340", "navn": "Malling" } },
+    { "type": "Feature", "properties": { "nr": "8350", "navn": "Hundslund" } },
+    { "type": "Feature", "properties": { "nr": "8355", "navn": "Solbjerg" } },
+    { "type": "Feature", "properties": { "nr": "8361", "navn": "Hasselager" } },
+    { "type": "Feature", "properties": { "nr": "8362", "navn": "Hørning" } },
+    { "type": "Feature", "properties": { "nr": "8370", "navn": "Hadsten" } },
+    { "type": "Feature", "properties": { "nr": "8380", "navn": "Trige" } },
+    { "type": "Feature", "properties": { "nr": "8381", "navn": "Tilst" } },
+    { "type": "Feature", "properties": { "nr": "8382", "navn": "Hinnerup" } },
+    { "type": "Feature", "properties": { "nr": "8400", "navn": "Ebeltoft" } },
+    { "type": "Feature", "properties": { "nr": "8410", "navn": "Rønde" } },
+    { "type": "Feature", "properties": { "nr": "8420", "navn": "Knebel" } },
+    { "type": "Feature", "properties": { "nr": "8444", "navn": "Balle" } },
+    { "type": "Feature", "properties": { "nr": "8450", "navn": "Hammel" } },
+    { "type": "Feature", "properties": { "nr": "8462", "navn": "Harlev J" } },
+    { "type": "Feature", "properties": { "nr": "8464", "navn": "Galten" } },
+    { "type": "Feature", "properties": { "nr": "8471", "navn": "Sabro" } },
+    { "type": "Feature", "properties": { "nr": "8472", "navn": "Sporup" } },
+    { "type": "Feature", "properties": { "nr": "8500", "navn": "Grenaa" } },
+    { "type": "Feature", "properties": { "nr": "8520", "navn": "Lystrup" } },
+    { "type": "Feature", "properties": { "nr": "8530", "navn": "Hjortshøj" } },
+    { "type": "Feature", "properties": { "nr": "8541", "navn": "Skødstrup" } },
+    { "type": "Feature", "properties": { "nr": "8543", "navn": "Hornslet" } },
+    { "type": "Feature", "properties": { "nr": "8544", "navn": "Mørke" } },
+    { "type": "Feature", "properties": { "nr": "8550", "navn": "Ryomgård" } },
+    { "type": "Feature", "properties": { "nr": "8560", "navn": "Kolind" } },
+    { "type": "Feature", "properties": { "nr": "8570", "navn": "Trustrup" } },
+    { "type": "Feature", "properties": { "nr": "8581", "navn": "Nimtofte" } },
+    { "type": "Feature", "properties": { "nr": "8585", "navn": "Glesborg" } },
+    { "type": "Feature", "properties": { "nr": "8586", "navn": "Ørum Djurs" } },
+    { "type": "Feature", "properties": { "nr": "8592", "navn": "Anholt" } },
+    { "type": "Feature", "properties": { "nr": "8600", "navn": "Silkeborg" } },
+    { "type": "Feature", "properties": { "nr": "8620", "navn": "Kjellerup" } },
+    { "type": "Feature", "properties": { "nr": "8632", "navn": "Lemming" } },
+    { "type": "Feature", "properties": { "nr": "8641", "navn": "Sorring" } },
+    { "type": "Feature", "properties": { "nr": "8643", "navn": "Ans By" } },
+    { "type": "Feature", "properties": { "nr": "8653", "navn": "Them" } },
+    { "type": "Feature", "properties": { "nr": "8654", "navn": "Bryrup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "8660", "navn": "Skanderborg" }
+    },
+    { "type": "Feature", "properties": { "nr": "8670", "navn": "Låsby" } },
+    { "type": "Feature", "properties": { "nr": "8680", "navn": "Ry" } },
+    { "type": "Feature", "properties": { "nr": "8700", "navn": "Horsens" } },
+    { "type": "Feature", "properties": { "nr": "8721", "navn": "Daugård" } },
+    { "type": "Feature", "properties": { "nr": "8722", "navn": "Hedensted" } },
+    { "type": "Feature", "properties": { "nr": "8723", "navn": "Løsning" } },
+    { "type": "Feature", "properties": { "nr": "8732", "navn": "Hovedgård" } },
+    { "type": "Feature", "properties": { "nr": "8740", "navn": "Brædstrup" } },
+    { "type": "Feature", "properties": { "nr": "8751", "navn": "Gedved" } },
+    { "type": "Feature", "properties": { "nr": "8752", "navn": "Østbirk" } },
+    { "type": "Feature", "properties": { "nr": "8762", "navn": "Flemming" } },
+    { "type": "Feature", "properties": { "nr": "8763", "navn": "Rask Mølle" } },
+    { "type": "Feature", "properties": { "nr": "8765", "navn": "Klovborg" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "8766", "navn": "Nørre Snede" }
+    },
+    { "type": "Feature", "properties": { "nr": "8781", "navn": "Stenderup" } },
+    { "type": "Feature", "properties": { "nr": "8783", "navn": "Hornsyld" } },
+    { "type": "Feature", "properties": { "nr": "8789", "navn": "Endelave" } },
+    { "type": "Feature", "properties": { "nr": "8799", "navn": "Tunø" } },
+    { "type": "Feature", "properties": { "nr": "8800", "navn": "Viborg" } },
+    { "type": "Feature", "properties": { "nr": "8830", "navn": "Tjele" } },
+    { "type": "Feature", "properties": { "nr": "8831", "navn": "Løgstrup" } },
+    { "type": "Feature", "properties": { "nr": "8832", "navn": "Skals" } },
+    { "type": "Feature", "properties": { "nr": "8840", "navn": "Rødkærsbro" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "8850", "navn": "Bjerringbro" }
+    },
+    { "type": "Feature", "properties": { "nr": "8860", "navn": "Ulstrup" } },
+    { "type": "Feature", "properties": { "nr": "8870", "navn": "Langå" } },
+    { "type": "Feature", "properties": { "nr": "8881", "navn": "Thorsø" } },
+    { "type": "Feature", "properties": { "nr": "8882", "navn": "Fårvang" } },
+    { "type": "Feature", "properties": { "nr": "8883", "navn": "Gjern" } },
+    { "type": "Feature", "properties": { "nr": "8900", "navn": "Randers C" } },
+    { "type": "Feature", "properties": { "nr": "8920", "navn": "Randers NV" } },
+    { "type": "Feature", "properties": { "nr": "8930", "navn": "Randers NØ" } },
+    { "type": "Feature", "properties": { "nr": "8940", "navn": "Randers SV" } },
+    { "type": "Feature", "properties": { "nr": "8950", "navn": "Ørsted" } },
+    { "type": "Feature", "properties": { "nr": "8960", "navn": "Randers SØ" } },
+    { "type": "Feature", "properties": { "nr": "8961", "navn": "Allingåbro" } },
+    { "type": "Feature", "properties": { "nr": "8963", "navn": "Auning" } },
+    { "type": "Feature", "properties": { "nr": "8970", "navn": "Havndal" } },
+    { "type": "Feature", "properties": { "nr": "8981", "navn": "Spentrup" } },
+    { "type": "Feature", "properties": { "nr": "8983", "navn": "Gjerlev J" } },
+    { "type": "Feature", "properties": { "nr": "8990", "navn": "Fårup" } },
+    { "type": "Feature", "properties": { "nr": "9000", "navn": "Aalborg" } },
+    { "type": "Feature", "properties": { "nr": "9200", "navn": "Aalborg SV" } },
+    { "type": "Feature", "properties": { "nr": "9210", "navn": "Aalborg SØ" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9220", "navn": "Aalborg Øst" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9230", "navn": "Svenstrup J" }
+    },
+    { "type": "Feature", "properties": { "nr": "9240", "navn": "Nibe" } },
+    { "type": "Feature", "properties": { "nr": "9260", "navn": "Gistrup" } },
+    { "type": "Feature", "properties": { "nr": "9270", "navn": "Klarup" } },
+    { "type": "Feature", "properties": { "nr": "9280", "navn": "Storvorde" } },
+    { "type": "Feature", "properties": { "nr": "9293", "navn": "Kongerslev" } },
+    { "type": "Feature", "properties": { "nr": "9300", "navn": "Sæby" } },
+    { "type": "Feature", "properties": { "nr": "9310", "navn": "Vodskov" } },
+    { "type": "Feature", "properties": { "nr": "9320", "navn": "Hjallerup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9330", "navn": "Dronninglund" }
+    },
+    { "type": "Feature", "properties": { "nr": "9340", "navn": "Asaa" } },
+    { "type": "Feature", "properties": { "nr": "9352", "navn": "Dybvad" } },
+    { "type": "Feature", "properties": { "nr": "9362", "navn": "Gandrup" } },
+    { "type": "Feature", "properties": { "nr": "9370", "navn": "Hals" } },
+    { "type": "Feature", "properties": { "nr": "9380", "navn": "Vestbjerg" } },
+    { "type": "Feature", "properties": { "nr": "9381", "navn": "Sulsted" } },
+    { "type": "Feature", "properties": { "nr": "9382", "navn": "Tylstrup" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9400", "navn": "Nørresundby" }
+    },
+    { "type": "Feature", "properties": { "nr": "9430", "navn": "Vadum" } },
+    { "type": "Feature", "properties": { "nr": "9440", "navn": "Aabybro" } },
+    { "type": "Feature", "properties": { "nr": "9460", "navn": "Brovst" } },
+    { "type": "Feature", "properties": { "nr": "9480", "navn": "Løkken" } },
+    { "type": "Feature", "properties": { "nr": "9490", "navn": "Pandrup" } },
+    { "type": "Feature", "properties": { "nr": "9492", "navn": "Blokhus" } },
+    { "type": "Feature", "properties": { "nr": "9493", "navn": "Saltum" } },
+    { "type": "Feature", "properties": { "nr": "9500", "navn": "Hobro" } },
+    { "type": "Feature", "properties": { "nr": "9510", "navn": "Arden" } },
+    { "type": "Feature", "properties": { "nr": "9520", "navn": "Skørping" } },
+    { "type": "Feature", "properties": { "nr": "9530", "navn": "Støvring" } },
+    { "type": "Feature", "properties": { "nr": "9541", "navn": "Suldrup" } },
+    { "type": "Feature", "properties": { "nr": "9550", "navn": "Mariager" } },
+    { "type": "Feature", "properties": { "nr": "9560", "navn": "Hadsund" } },
+    { "type": "Feature", "properties": { "nr": "9574", "navn": "Bælum" } },
+    { "type": "Feature", "properties": { "nr": "9575", "navn": "Terndrup" } },
+    { "type": "Feature", "properties": { "nr": "9600", "navn": "Aars" } },
+    { "type": "Feature", "properties": { "nr": "9610", "navn": "Nørager" } },
+    { "type": "Feature", "properties": { "nr": "9620", "navn": "Aalestrup" } },
+    { "type": "Feature", "properties": { "nr": "9631", "navn": "Gedsted" } },
+    { "type": "Feature", "properties": { "nr": "9632", "navn": "Møldrup" } },
+    { "type": "Feature", "properties": { "nr": "9640", "navn": "Farsø" } },
+    { "type": "Feature", "properties": { "nr": "9670", "navn": "Løgstør" } },
+    { "type": "Feature", "properties": { "nr": "9681", "navn": "Ranum" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9690", "navn": "Fjerritslev" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9700", "navn": "Brønderslev" }
+    },
+    { "type": "Feature", "properties": { "nr": "9740", "navn": "Jerslev J" } },
+    { "type": "Feature", "properties": { "nr": "9750", "navn": "Østervrå" } },
+    { "type": "Feature", "properties": { "nr": "9760", "navn": "Vrå" } },
+    { "type": "Feature", "properties": { "nr": "9800", "navn": "Hjørring" } },
+    { "type": "Feature", "properties": { "nr": "9830", "navn": "Tårs" } },
+    { "type": "Feature", "properties": { "nr": "9850", "navn": "Hirtshals" } },
+    { "type": "Feature", "properties": { "nr": "9870", "navn": "Sindal" } },
+    { "type": "Feature", "properties": { "nr": "9881", "navn": "Bindslev" } },
+    {
+      "type": "Feature",
+      "properties": { "nr": "9900", "navn": "Frederikshavn" }
+    },
+    { "type": "Feature", "properties": { "nr": "9940", "navn": "Læsø" } },
+    { "type": "Feature", "properties": { "nr": "9970", "navn": "Strandby" } },
+    { "type": "Feature", "properties": { "nr": "9981", "navn": "Jerup" } },
+    { "type": "Feature", "properties": { "nr": "9982", "navn": "Ålbæk" } },
+    { "type": "Feature", "properties": { "nr": "9990", "navn": "Skagen" } }
+  ]
+}

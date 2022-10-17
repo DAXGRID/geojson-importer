@@ -20,7 +20,7 @@ internal static class SqlServerDynamicSchemaBuilder
         ColumnType.Guid => "[UNIQUEIDENTIFIER]",
         ColumnType.Int => "[int]",
         ColumnType.Geometry => "[geometry]",
-        ColumnType.String => "[nvarchar](MAX)",
+        ColumnType.String => "[nvarchar](4000)",
         _ => throw new ArgumentException(
             $"Could not handle type {Enum.GetName(columnType)}")
     };

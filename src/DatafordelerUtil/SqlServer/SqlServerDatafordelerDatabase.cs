@@ -145,10 +145,6 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
                 row["coord"] = SqlGeometry.Null;
             }
         }
-        else
-        {
-            row["coord"] = SqlGeometry.Null;
-        }
 
         return row;
     }

@@ -30,6 +30,8 @@
 
   <ItemGroup>
     <None Update="Data/jordstykke.geojson" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Data/postnummer.geojson" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Data/adgangsadresse.geojson" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

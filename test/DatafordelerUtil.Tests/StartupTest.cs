@@ -19,7 +19,17 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     schemaName: "test_schema",
                     tableName: "jordstykke",
                     keyFieldName: "id",
-                    filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"))
+                    filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson")),
+                new ImportSetting(
+                    schemaName: "test_schema",
+                    tableName: "postnummer",
+                    keyFieldName: "nr",
+                    filePath: TestUtil.AbsolutePath("Data/postnummer.geojson")),
+                new ImportSetting(
+                    schemaName: "test_schema",
+                    tableName: "adgangsadresse",
+                    keyFieldName: "id",
+                    filePath: TestUtil.AbsolutePath("Data/adgangsadresse.geojson"))
             });
 
         var database = new SqlServerDatafordelerDatabase(
