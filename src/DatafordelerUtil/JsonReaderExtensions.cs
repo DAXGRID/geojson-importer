@@ -5,7 +5,7 @@ namespace DatafordelerUtil;
 
 internal static class JsonReaderExtensions
 {
-    public static IEnumerable<T?> SelectTokensWithRegex<T>(
+    public static IEnumerable<T?> StreamInnerArrayWithRegex<T>(
         this JsonReader jsonReader, Regex regex)
     {
         JsonSerializer serializer = new JsonSerializer();
@@ -14,7 +14,20 @@ internal static class JsonReaderExtensions
             if (regex.IsMatch(jsonReader.Path)
                 && jsonReader.TokenType != JsonToken.PropertyName)
             {
-                yield return serializer.Deserialize<T>(jsonReader);
+                break;
+            }
+        }
+
+        while (jsonReader.Read())
+        {
+            if (jsonReader.TokenType == JsonToken.EndArray)
+            {
+                break;
+            }
+
+            if (jsonReader.TokenType == JsonToken.StartObject)
+            {
+                yield return serializer.Deserialize<T?>(jsonReader);
             }
         }
     }

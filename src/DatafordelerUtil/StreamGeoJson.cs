@@ -35,30 +35,38 @@ internal static class StreamGeoJson
     {
         var regex = new Regex(@"features");
 
-        using var stream = new FileStream(path, FileMode.Open);
+        using var stream =
+            new FileStream(
+                path,
+                FileMode.Open, FileAccess.Read, FileShare.None,
+                bufferSize: 4096,
+                useAsync: true);
+
         using var streamReader = new StreamReader(stream);
         using var jsonReader = new JsonTextReader(streamReader);
 
-        var features = jsonReader
-            .SelectTokensWithRegex<GeoJsonFeature[]>(regex).FirstOrDefault() ??
+        return jsonReader
+            .StreamInnerArrayWithRegex<GeoJsonFeature>(regex).FirstOrDefault() ??
             throw new InvalidOperationException(
                 "Could not get features.");
-
-        return features.FirstOrDefault() ??
-            throw new InvalidOperationException("Could not get first feature.");
     }
 
     public static IEnumerable<GeoJsonFeature> StreamFeaturesFile(string path)
     {
         var regex = new Regex(@"features");
 
-        using var stream = new FileStream(path, FileMode.Open);
+        using var stream =
+            new FileStream(
+                path,
+                FileMode.Open, FileAccess.Read, FileShare.None,
+                bufferSize: 4096,
+                useAsync: true);
+
         using var streamReader = new StreamReader(stream);
         using var jsonReader = new JsonTextReader(streamReader);
 
         var features = jsonReader
-            .SelectTokensWithRegex<GeoJsonFeature[]>(regex)
-            .FirstOrDefault();
+            .StreamInnerArrayWithRegex<GeoJsonFeature>(regex);
 
         if (features is null)
         {
@@ -68,7 +76,8 @@ internal static class StreamGeoJson
 
         foreach (var feature in features)
         {
-            yield return feature;
+            yield return feature ??
+                throw new InvalidOperationException("Could not extract geojson.");
         }
     }
 }

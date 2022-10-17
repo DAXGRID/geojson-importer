@@ -70,7 +70,7 @@ internal class Startup
                 .ConfigureAwait(false);
 
             var features = new List<GeoJsonFeature>();
-            foreach (var feature in StreamGeoJson.StreamFeaturesFile(import.FilePath))
+            foreach (var feature in StreamGeoJson.StreamFeaturesFileAsync(import.FilePath))
             {
                 if (features.Count == BulkCount)
                 {

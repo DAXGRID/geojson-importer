@@ -18,7 +18,7 @@ public sealed class StreamGeoJsonTest
     public void Stream_geojson_returns_geojson_features()
     {
         var filePath = TestUtil.AbsolutePath("Data/jordstykke.geojson");
-        var stream = StreamGeoJson.StreamFeaturesFile(filePath);
+        var stream = StreamGeoJson.StreamFeaturesFileAsync(filePath);
 
         var features = new List<GeoJsonFeature>();
         foreach (var feature in stream)
