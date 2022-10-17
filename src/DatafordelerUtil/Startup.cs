@@ -25,9 +25,7 @@ internal class Startup
         {
             _logger.LogInformation("Starting import of {TableName}.", import.TableName);
 
-            var exampleFeature = await StreamGeoJson
-                .FirstGeoJsonFeatureAsync(import.FilePath)
-                .ConfigureAwait(false);
+            var exampleFeature = StreamGeoJson.FirstGeoJsonFeature(import.FilePath);
 
             var primaryTableDescription = DynamicTableDescriptionFactory.Create(
                 import.SchemaName,
@@ -71,18 +69,43 @@ internal class Startup
             await _datafordelerDatabase.CreateTable(temporaryTableDescription)
                 .ConfigureAwait(false);
 
-            await foreach (var bulkFeatures in StreamGeoJson.StreamFeaturesFileAsync(
-                               import.FilePath, BulkCount).ConfigureAwait(false))
+            var features = new List<GeoJsonFeature>();
+            foreach (var feature in StreamGeoJson.StreamFeaturesFile(import.FilePath))
+            {
+                if (features.Count == BulkCount)
+                {
+                    _logger.LogInformation(
+                        "Bulk inserting {Count} into {TableName}",
+                        features.Count,
+                        temporaryTableName);
+
+                    await _datafordelerDatabase
+                        .BulkImportGeoJsonFeatures(
+                            temporaryTableName,
+                            features,
+                            temporaryTableDescription.Schema)
+                        .ConfigureAwait(false);
+
+                    features.Clear();
+                }
+                else
+                {
+                    features.Add(feature);
+                }
+            }
+
+            // Insert the remaining features.
+            if (features.Any())
             {
                 _logger.LogInformation(
                     "Bulk inserting {Count} into {TableName}",
-                    bulkFeatures.Count(),
+                    features.Count,
                     temporaryTableName);
 
                 await _datafordelerDatabase
                     .BulkImportGeoJsonFeatures(
                         temporaryTableName,
-                        bulkFeatures,
+                        features,
                         temporaryTableDescription.Schema)
                     .ConfigureAwait(false);
             }

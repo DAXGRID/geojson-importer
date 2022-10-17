@@ -1,6 +1,7 @@
 using NetTopologySuite.Geometries;
 using NetTopologySuite.IO.Converters;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace DatafordelerUtil;
 
@@ -30,46 +31,44 @@ internal sealed record GeoJsonFeature
 
 internal static class StreamGeoJson
 {
-    public static async Task<GeoJsonFeature> FirstGeoJsonFeatureAsync(string path)
+    public static GeoJsonFeature FirstGeoJsonFeature(string path)
     {
-        using var sr = new StreamReader(path);
-        var line = await sr.ReadLineAsync().ConfigureAwait(false);
+        var regex = new Regex(@"features");
 
-        if (line is null)
-        {
-            throw new InvalidOperationException("Could not get the first line.");
-        }
+        using var stream = new FileStream(path, FileMode.Open);
+        using var streamReader = new StreamReader(stream);
+        using var jsonReader = new JsonTextReader(streamReader);
 
-        return JsonConvert.DeserializeObject<GeoJsonFeature>(line) ??
+        var features = jsonReader
+            .SelectTokensWithRegex<GeoJsonFeature[]>(regex).FirstOrDefault() ??
             throw new InvalidOperationException(
-                $"Could not deserialize {nameof(GeoJsonFeature)}.");
+                "Could not get features.");
+
+        return features.FirstOrDefault() ??
+            throw new InvalidOperationException("Could not get first feature.");
     }
 
-    public static async IAsyncEnumerable<IEnumerable<GeoJsonFeature>>
-        StreamFeaturesFileAsync(string path, uint bulkCount)
+    public static IEnumerable<GeoJsonFeature> StreamFeaturesFile(string path)
     {
-        using var sr = new StreamReader(path);
-        string? line;
+        var regex = new Regex(@"features");
 
-        var lines = new List<string>();
-        while ((line = await sr.ReadLineAsync().ConfigureAwait(false)) != null)
+        using var stream = new FileStream(path, FileMode.Open);
+        using var streamReader = new StreamReader(stream);
+        using var jsonReader = new JsonTextReader(streamReader);
+
+        var features = jsonReader
+            .SelectTokensWithRegex<GeoJsonFeature[]>(regex)
+            .FirstOrDefault();
+
+        if (features is null)
         {
-            lines.Add(line);
-            if (lines.Count == bulkCount)
-            {
-                yield return lines
-                    .AsParallel()
-                    .Select(x => JsonConvert.DeserializeObject<GeoJsonFeature>(x) ??
-                            throw new InvalidOperationException(
-                                $"Could not deserialize {nameof(GeoJsonFeature)}."));
-                lines.Clear();
-            }
+            throw new InvalidOperationException(
+                "Could not find 'features' token in stream.");
         }
 
-        yield return lines
-            .AsParallel()
-            .Select(x => JsonConvert.DeserializeObject<GeoJsonFeature>(x) ??
-                    throw new InvalidOperationException(
-                        $"Could not deserialize {nameof(GeoJsonFeature)}."));
+        foreach (var feature in features)
+        {
+            yield return feature;
+        }
     }
 }
