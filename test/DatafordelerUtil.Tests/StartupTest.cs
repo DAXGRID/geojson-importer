@@ -11,6 +11,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
     public async Task Start_insert_process_ms_sql()
     {
         var settings = new Settings(
+            srid: 25832,
             connectionString: MsSqlDatabaseFixture.TestConnectionString,
             imports: new List<ImportSetting>
             {

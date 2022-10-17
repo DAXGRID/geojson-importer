@@ -5,16 +5,16 @@ namespace DatafordelerUtil;
 internal sealed record ImportSetting
 {
     [JsonPropertyName("tableName")]
-    public string TableName { get; }
+    public string TableName { get; init; }
 
     [JsonPropertyName("keyFieldName")]
-    public string KeyFieldName { get; }
+    public string KeyFieldName { get; init; }
 
     [JsonPropertyName("filePath")]
-    public string FilePath { get; }
+    public string FilePath { get; init; }
 
     [JsonPropertyName("schemaName")]
-    public string? SchemaName { get; }
+    public string? SchemaName { get; init; }
 
     public ImportSetting(
         string tableName,
@@ -24,17 +24,20 @@ internal sealed record ImportSetting
     {
         if (string.IsNullOrWhiteSpace(tableName))
         {
-            throw new ArgumentException("Cannot be null, empty or whitespace.", nameof(tableName));
+            throw new ArgumentException(
+                "Cannot be null, empty or whitespace.", nameof(tableName));
         }
 
         if (string.IsNullOrWhiteSpace(keyFieldName))
         {
-            throw new ArgumentException("Cannot be null, empty or whitespace.", nameof(keyFieldName));
+            throw new ArgumentException(
+                "Cannot be null, empty or whitespace.", nameof(keyFieldName));
         }
 
         if (string.IsNullOrWhiteSpace(filePath))
         {
-            throw new ArgumentException("Cannot be null, empty or whitespace.", nameof(filePath));
+            throw new ArgumentException(
+                "Cannot be null, empty or whitespace.", nameof(filePath));
         }
 
         TableName = tableName;
@@ -46,14 +49,18 @@ internal sealed record ImportSetting
 
 internal sealed record Settings
 {
+    [JsonPropertyName("srid")]
+    public int Srid { get; init; }
+
     [JsonPropertyName("connectionString")]
-    public string ConnectionString { get; }
+    public string ConnectionString { get; init; }
 
     [JsonPropertyName("imports")]
-    public IEnumerable<ImportSetting> Imports { get; }
+    public IEnumerable<ImportSetting> Imports { get; init; }
 
     [JsonConstructor]
     public Settings(
+        int srid,
         string connectionString,
         IEnumerable<ImportSetting> imports)
     {
@@ -66,5 +73,6 @@ internal sealed record Settings
 
         ConnectionString = connectionString;
         Imports = imports;
+        Srid = srid;
     }
 }
