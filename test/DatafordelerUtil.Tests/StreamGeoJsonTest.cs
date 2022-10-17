@@ -10,7 +10,7 @@ public sealed class StreamGeoJsonTest
         var feature = StreamGeoJson.FirstGeoJsonFeature(filePath);
 
         feature.Should().NotBeNull();
-        feature.Properties["id"].Should().Be("4909206");
+        feature.Properties["id"].Should().Be(4909206);
     }
 
     [Fact]

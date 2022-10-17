@@ -11,11 +11,14 @@ internal static class SqlServerDynamicSchemaBuilder
     private static string CreateColumns(DynamicTableDescription desc) =>
         string.Join(",", desc.Columns.Select(CreateColumn));
 
-    private static string CreateColumn(DynamicColumnDescription desc) =>
-        $"[{desc.Name}] {MapColumnType(desc.ColumnType)} NULL";
+    private static string CreateColumn(DynamicColumnDescription desc) => desc.PrimaryKey
+        ? $"[{desc.Name}] {MapColumnType(desc.ColumnType)} NOT NULL PRIMARY KEY"
+        : $"[{desc.Name}] {MapColumnType(desc.ColumnType)} NULL";
 
     private static string MapColumnType(ColumnType columnType) => columnType switch
     {
+        ColumnType.Guid => "[UNIQUEIDENTIFIER]",
+        ColumnType.Int => "[int]",
         ColumnType.Geometry => "[geometry]",
         ColumnType.String => "[nvarchar](MAX)",
         _ => throw new ArgumentException(

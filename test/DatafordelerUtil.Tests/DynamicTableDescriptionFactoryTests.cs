@@ -22,9 +22,9 @@ public sealed class DynamicTableDescriptionFactoryTests
 
         var geoJsonFeature = new GeoJsonFeature(
              type: "Feature",
-             properties: new Dictionary<string, string?>
+             properties: new Dictionary<string, object?>
              {
-                {"id", "4909206"},
+                {"id", 4909206},
                 {"forretningshaendelse", "Afledt ændring"},
                 {"senestesaglokalid", "90000424"},
                 {"forretningsproces", "Anden sagskategori"},
@@ -46,7 +46,7 @@ public sealed class DynamicTableDescriptionFactoryTests
                 {"delnummer", null},
                 {"faelleslod", "0"},
                 {"matrikelnummer", "25s"},
-                {"ejerlavskode", "1110252"},
+                {"ejerlavskode", 1110252},
                 {"sognekode", "7973"},
                 {"kommunekode", "0630"},
                 {"regionskode", "1083"},
@@ -74,7 +74,7 @@ public sealed class DynamicTableDescriptionFactoryTests
             key: "id",
             columns: new List<DynamicColumnDescription>
             {
-                new("id", ColumnType.String),
+                new("id", ColumnType.Int, true),
                 new("forretningshaendelse", ColumnType.String),
                 new("senestesaglokalid", ColumnType.String),
                 new("forretningsproces", ColumnType.String),
@@ -96,7 +96,7 @@ public sealed class DynamicTableDescriptionFactoryTests
                 new("delnummer", ColumnType.String),
                 new("faelleslod", ColumnType.String),
                 new("matrikelnummer", ColumnType.String),
-                new("ejerlavskode", ColumnType.String),
+                new("ejerlavskode", ColumnType.Int),
                 new("sognekode", ColumnType.String),
                 new("kommunekode", ColumnType.String),
                 new("regionskode", ColumnType.String),

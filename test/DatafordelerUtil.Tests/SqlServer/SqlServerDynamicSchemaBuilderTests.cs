@@ -13,11 +13,11 @@ public sealed class SqlServerDynamicSchemaBuilderTests
             key: "id",
             columns: new List<DynamicColumnDescription>
             {
-                new("id", ColumnType.String),
-                new("forretningshaendelse", ColumnType.String),
-                new("senestesaglokalid", ColumnType.String),
-                new("forretningsproces", ColumnType.String),
-                new("coord", ColumnType.Geometry),
+                new("id", ColumnType.Int, true),
+                new("forretningshaendelse", ColumnType.String, false),
+                new("senestesaglokalid", ColumnType.String, false),
+                new("forretningsproces", ColumnType.String, false),
+                new("coord", ColumnType.Geometry, false),
             }
         );
 
@@ -25,7 +25,7 @@ public sealed class SqlServerDynamicSchemaBuilderTests
 
         var expected = @"
 CREATE TABLE [dbo].[jordstykke](
-[id] [nvarchar](MAX) NULL,
+[id] [int] NOT NULL PRIMARY KEY,
 [forretningshaendelse] [nvarchar](MAX) NULL,
 [senestesaglokalid] [nvarchar](MAX) NULL,
 [forretningsproces] [nvarchar](MAX) NULL,
