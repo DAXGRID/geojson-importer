@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.SqlServer.Types;
 using System.Data;
 using System.Data.SqlTypes;
+using System.Globalization;
 
 namespace DatafordelerUtil.SqlServer;
 
@@ -122,6 +123,58 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
         await connection.OpenAsync().ConfigureAwait(false);
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);
+    }
+
+    public async Task CreateSpatialIndex(string tableName, string? schemaName)
+    {
+        if (_settings.SpartialIndexStatement is null)
+        {
+            throw new InvalidOperationException(
+                "No spatial index statement has been set in the config.");
+        }
+
+        var sql = _settings.SpartialIndexStatement.Replace(
+            "{table_name}", tableName, true, CultureInfo.InvariantCulture);
+
+        if (schemaName is not null)
+        {
+            sql = sql.Replace(
+                "{schema_name}",
+                schemaName,
+                true,
+                CultureInfo.InvariantCulture);
+        }
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        using var cmd = new SqlCommand(sql, connection);
+        cmd.CommandTimeout = 60 * 10;
+
+        await connection.OpenAsync().ConfigureAwait(false);
+        await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+    }
+
+    public async Task<bool> IndexExists(
+        string indexName,
+        string tableName,
+        string? schemaName)
+    {
+        var objectId = schemaName is null
+            ? tableName
+            : $"{schemaName}.{tableName}";
+
+        var sql = $@"
+SELECT object_id
+FROM sys.indexes
+WHERE name='{indexName}' AND object_id = OBJECT_ID('{objectId}')";
+
+        using var connection = new SqlConnection(_settings.ConnectionString);
+        using var cmd = new SqlCommand(sql, connection);
+
+        await connection.OpenAsync().ConfigureAwait(false);
+
+        var result = await cmd.ExecuteScalarAsync().ConfigureAwait(false);
+
+        return result is not null;
     }
 
     private DataRow CreateFeatureRow(DataRow row, GeoJsonFeature feature)

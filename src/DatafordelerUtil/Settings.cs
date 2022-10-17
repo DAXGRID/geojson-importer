@@ -52,6 +52,9 @@ internal sealed record Settings
     [JsonPropertyName("srid")]
     public int Srid { get; init; }
 
+    [JsonPropertyName("spatialIndexStatement")]
+    public string? SpartialIndexStatement { get; init; }
+
     [JsonPropertyName("connectionString")]
     public string ConnectionString { get; init; }
 
@@ -61,6 +64,7 @@ internal sealed record Settings
     [JsonConstructor]
     public Settings(
         int srid,
+        string? spartialIndexStatement,
         string connectionString,
         IEnumerable<ImportSetting> imports)
     {
@@ -74,5 +78,6 @@ internal sealed record Settings
         ConnectionString = connectionString;
         Imports = imports;
         Srid = srid;
+        SpartialIndexStatement = spartialIndexStatement;
     }
 }

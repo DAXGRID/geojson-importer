@@ -12,6 +12,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
     {
         var settings = new Settings(
             srid: 25832,
+            spartialIndexStatement: "CREATE SPATIAL INDEX [coord_sidx] ON [{schema_name}].[{table_name}] (coord) USING  GEOMETRY_GRID WITH (BOUNDING_BOX =(400000, 6000000, 900000, 6450000), GRIDS =(LEVEL_1 = MEDIUM,LEVEL_2 = MEDIUM,LEVEL_3 = MEDIUM,LEVEL_4 = MEDIUM), CELLS_PER_OBJECT = 16) ON [PRIMARY]",
             connectionString: MsSqlDatabaseFixture.TestConnectionString,
             imports: new List<ImportSetting>
             {

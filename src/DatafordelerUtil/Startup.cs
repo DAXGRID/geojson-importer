@@ -111,7 +111,7 @@ internal class Startup
             }
 
             _logger.LogInformation(
-                "Merging {Target} from {Source}.",
+                "Merging into {Target} from {Source}.",
                 primaryTableDescription.Name,
                 temporaryTableDescription.Name);
 
@@ -127,6 +127,41 @@ internal class Startup
                 .DeleteTable(temporaryTableDescription.Name,
                              temporaryTableDescription.Schema)
                 .ConfigureAwait(false);
+
+
+            var hasGeometry = primaryTableDescription
+                .Columns
+                .Where(x => x.ColumnType == ColumnType.Geometry)
+                .Any();
+
+            if (!string.IsNullOrWhiteSpace(_settings.SpartialIndexStatement) && hasGeometry)
+            {
+                var indexExists = await _datafordelerDatabase
+                    .IndexExists(
+                        "coord_sidx",
+                        primaryTableDescription.Name,
+                        primaryTableDescription.Schema)
+                    .ConfigureAwait(false);
+
+                if (indexExists)
+                {
+                    _logger.LogInformation(
+                        "Index already exists for {TableName}, skipping creation.",
+                        primaryTableDescription.Name);
+                }
+                else
+                {
+                    _logger.LogInformation(
+                            "Creating spatial index for {TableName}.",
+                            primaryTableDescription.Name);
+
+                    await _datafordelerDatabase
+                        .CreateSpatialIndex(
+                            primaryTableDescription.Name,
+                            primaryTableDescription.Schema)
+                        .ConfigureAwait(false);
+                }
+            }
         }
     }
 }

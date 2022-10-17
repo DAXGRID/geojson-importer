@@ -11,4 +11,6 @@ internal interface IDatafordelerDatabase
         string tableName,
         IEnumerable<GeoJsonFeature> features,
         string? schemaName = null);
+    Task CreateSpatialIndex(string tableName, string? schemaName);
+    Task<bool> IndexExists(string indexName, string tableName, string? schemaName);
 }
