@@ -1,14 +1,8 @@
-# Datafordeler util
+# GeoJSON Importer
 
 ## Data requirement
 
-The only takes in data in the `GeoJSONSeq` format. It handles both features with and without `geometries`.
-
-Example to generate the `GeoJSONSeq` from an `gpkg` file using `ogr2ogr`.
-
-```sh
-ogr2ogr -f GeoJSONSeq test.geojson MatrikelGeometriGaeldendeDKComplete.gpkg -sql 'SELECT * FROM jordstykke where sognekode = 7973'
-```
+The only takes in data in the `GeoJSON` format. It handles both features with and without `geometries`.
 
 ## Testing
 
