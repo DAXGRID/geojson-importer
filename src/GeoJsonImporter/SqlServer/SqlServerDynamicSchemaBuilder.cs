@@ -1,4 +1,4 @@
-namespace DatafordelerUtil.SqlServer;
+namespace GeoJsonImporter.SqlServer;
 
 internal static class SqlServerDynamicSchemaBuilder
 {

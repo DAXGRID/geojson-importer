@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.SqlTypes;
 using System.Globalization;
 
-namespace DatafordelerUtil.SqlServer;
+namespace GeoJsonImporter.SqlServer;
 
 internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 {

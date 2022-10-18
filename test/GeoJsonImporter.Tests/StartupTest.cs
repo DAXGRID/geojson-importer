@@ -1,8 +1,8 @@
-using DatafordelerUtil.SqlServer;
+using GeoJsonImporter.SqlServer;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace DatafordelerUtil.Tests;
+namespace GeoJsonImporter.Tests;
 
 public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
 {

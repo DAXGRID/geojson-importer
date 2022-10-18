@@ -1,4 +1,4 @@
-namespace DatafordelerUtil.Tests;
+namespace GeoJsonImporter.Tests;
 
 public sealed class StreamGeoJsonTest
 {

@@ -1,4 +1,4 @@
-namespace DatafordelerUtil;
+namespace GeoJsonImporter;
 
 internal enum ColumnType
 {

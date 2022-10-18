@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace DatafordelerUtil;
+namespace GeoJsonImporter;
 
 internal class Startup
 {

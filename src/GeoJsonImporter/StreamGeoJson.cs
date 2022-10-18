@@ -3,7 +3,7 @@ using NetTopologySuite.IO.Converters;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
-namespace DatafordelerUtil;
+namespace GeoJsonImporter;
 
 internal sealed record GeoJsonFeature
 {

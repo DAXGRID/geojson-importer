@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DatafordelerUtil\DatafordelerUtil.csproj" />
+    <ProjectReference Include="..\..\src\GeoJsonImporter\GeoJsonImporter.csproj" />
   </ItemGroup>
 
   <ItemGroup>

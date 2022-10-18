@@ -1,10 +1,10 @@
-﻿using DatafordelerUtil.SqlServer;
+﻿using GeoJsonImporter.SqlServer;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
 using System.Text.Json;
 
-namespace DatafordelerUtil;
+namespace GeoJsonImporter;
 
 internal sealed class Program
 {

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3EDC358D-CC59-4DBD-9550-54D50AD2816E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoJsonImporter", "src\GeoJsonImporter\GeoJsonImporter.csproj", "{1FE3E1C2-3563-4585-A09F-EA559DBA42C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FA97DFB3-3708-400B-9E3A-9B65AA264A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoJsonImporter.Tests", "test\GeoJsonImporter.Tests\GeoJsonImporter.Tests.csproj", "{D44BA77D-99FB-4FDC-B7A9-5660C453FF82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FE3E1C2-3563-4585-A09F-EA559DBA42C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE3E1C2-3563-4585-A09F-EA559DBA42C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE3E1C2-3563-4585-A09F-EA559DBA42C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE3E1C2-3563-4585-A09F-EA559DBA42C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44BA77D-99FB-4FDC-B7A9-5660C453FF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44BA77D-99FB-4FDC-B7A9-5660C453FF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44BA77D-99FB-4FDC-B7A9-5660C453FF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44BA77D-99FB-4FDC-B7A9-5660C453FF82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FE3E1C2-3563-4585-A09F-EA559DBA42C3} = {3EDC358D-CC59-4DBD-9550-54D50AD2816E}
+		{D44BA77D-99FB-4FDC-B7A9-5660C453FF82} = {FA97DFB3-3708-400B-9E3A-9B65AA264A10}
+	EndGlobalSection
+EndGlobal

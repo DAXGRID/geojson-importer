@@ -2,7 +2,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 
-namespace DatafordelerUtil.Tests;
+namespace GeoJsonImporter.Tests;
 
 internal class MsSqlDatabaseFixture : IAsyncLifetime
 {

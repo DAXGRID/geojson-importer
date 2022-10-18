@@ -1,6 +1,6 @@
-using DatafordelerUtil.SqlServer;
+using GeoJsonImporter.SqlServer;
 
-namespace DatafordelerUtil.Tests.SqlServer;
+namespace GeoJsonImporter.Tests.SqlServer;
 
 public sealed class SqlServerDynamicSchemaBuilderTests
 {

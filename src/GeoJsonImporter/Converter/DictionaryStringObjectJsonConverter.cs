@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace DatafordelerUtil.Converter;
+namespace GeoJsonImporter.Converter;
 
 public class DictionaryStringObjectJsonConverter
     : JsonConverter<Dictionary<string, object?>>

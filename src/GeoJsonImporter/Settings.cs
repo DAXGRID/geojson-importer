@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace DatafordelerUtil;
+namespace GeoJsonImporter;
 
 internal sealed record ImportSetting
 {
