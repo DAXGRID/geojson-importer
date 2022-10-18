@@ -128,7 +128,6 @@ internal class Startup
                              temporaryTableDescription.Schema)
                 .ConfigureAwait(false);
 
-
             var hasGeometry = primaryTableDescription
                 .Columns
                 .Where(x => x.ColumnType == ColumnType.Geometry)
