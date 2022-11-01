@@ -35,8 +35,8 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     filePath: TestUtil.AbsolutePath("Data/adgangsadresse.geojson"),
                     fieldNameMappings: new Dictionary<string, string>
                     {
-                        { "adressepunktændringsdato", "dato"},
-                        { "postnr", "postnummer"}
+                        { "adressepunktændringsdato", "dato" },
+                        { "postnr", "postnummer" }
                     })});
 
         var database = new SqlServerDatafordelerDatabase(
