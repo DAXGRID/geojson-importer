@@ -20,18 +20,24 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     schemaName: "test_schema",
                     tableName: "jordstykke",
                     keyFieldName: "id",
-                    filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson")),
+                    filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"),
+                    fieldNameMappings: null),
                 new ImportSetting(
                     schemaName: "test_schema",
                     tableName: "postnummer",
                     keyFieldName: "nr",
-                    filePath: TestUtil.AbsolutePath("Data/postnummer.geojson")),
+                    filePath: TestUtil.AbsolutePath("Data/postnummer.geojson"),
+                    fieldNameMappings: null),
                 new ImportSetting(
                     schemaName: "test_schema",
                     tableName: "adgangsadresse",
                     keyFieldName: "id",
-                    filePath: TestUtil.AbsolutePath("Data/adgangsadresse.geojson"))
-            });
+                    filePath: TestUtil.AbsolutePath("Data/adgangsadresse.geojson"),
+                    fieldNameMappings: new Dictionary<string, string>
+                    {
+                        { "adressepunktændringsdato", "dato"},
+                        { "postnr", "postnummer"}
+                    })});
 
         var database = new SqlServerDatafordelerDatabase(
             settings: settings,
@@ -56,8 +62,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
         var exists = await TableExists(
             MsSqlDatabaseFixture.TestConnectionString,
             "jordstykke_tmp",
-            "test_schema"
-        );
+            "test_schema");
 
         exists.Should().BeFalse();
     }

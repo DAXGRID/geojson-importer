@@ -31,7 +31,8 @@ internal class Startup
                 import.SchemaName,
                 import.TableName,
                 import.KeyFieldName,
-                exampleFeature);
+                exampleFeature,
+                import.FieldNameMappings);
 
             var primaryTableExists = await _datafordelerDatabase.TableExists(
                 import.TableName, import.SchemaName).ConfigureAwait(false);
@@ -48,7 +49,8 @@ internal class Startup
                 import.SchemaName,
                 temporaryTableName,
                 import.KeyFieldName,
-                exampleFeature);
+                exampleFeature,
+                import.FieldNameMappings);
 
             var temporaryTableExists = await _datafordelerDatabase
                 .TableExists(temporaryTableDescription.Name,
@@ -83,6 +85,7 @@ internal class Startup
                         .BulkImportGeoJsonFeatures(
                             temporaryTableName,
                             features,
+                            import.FieldNameMappings,
                             temporaryTableDescription.Schema)
                         .ConfigureAwait(false);
 
@@ -106,6 +109,7 @@ internal class Startup
                     .BulkImportGeoJsonFeatures(
                         temporaryTableName,
                         features,
+                        import.FieldNameMappings,
                         temporaryTableDescription.Schema)
                     .ConfigureAwait(false);
             }

@@ -6,23 +6,28 @@ internal static class DynamicTableDescriptionFactory
         string? schema,
         string tableName,
         string key,
-        GeoJsonFeature geoJsonFeature)
+        GeoJsonFeature geoJsonFeature,
+        IReadOnlyDictionary<string, string> fieldNameMappings)
     {
         return new DynamicTableDescription(
             schema: schema,
             key: key,
             name: tableName,
-            columns: CreateDynamicColumnDescription(geoJsonFeature, key));
+            columns: CreateDynamicColumnDescription(
+                geoJsonFeature, key, fieldNameMappings));
     }
 
     private static IEnumerable<DynamicColumnDescription> CreateDynamicColumnDescription(
         GeoJsonFeature feature,
-        string primaryKeyFieldName)
+        string primaryKeyFieldName,
+        IReadOnlyDictionary<string, string> fieldMappings)
     {
         var properties = feature.Properties
             .Select(
                 x => new DynamicColumnDescription(
-                    x.Key,
+                    fieldMappings.TryGetValue(x.Key, out var mapping)
+                    ? mapping ?? throw new InvalidOperationException("key mapping value cannot be null")
+                    : x.Key,
                     GetColumnType(x.Value),
                     x.Key == primaryKeyFieldName));
 

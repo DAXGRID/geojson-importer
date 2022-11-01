@@ -86,6 +86,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
     public async Task BulkImportGeoJsonFeatures(
         string tableName,
         IEnumerable<GeoJsonFeature> features,
+        IReadOnlyDictionary<string, string> fieldNameMappings,
         string? schemaName)
     {
         if (features is null || !features.Any())
@@ -100,8 +101,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         var exampleFeature = features.First();
         foreach (var property in features.First().Properties)
         {
-            // TODO make a cleaner implementation so not all of them are strings. :))
-            table.Columns.Add(property.Key, typeof(string));
+            fieldNameMappings.TryGetValue(property.Key, out var propertyKeyMapping);
+            table.Columns.Add(propertyKeyMapping ?? property.Key, typeof(string));
         }
 
         if (exampleFeature.Geometry is not null)
@@ -109,7 +110,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
             table.Columns.Add("coord", typeof(SqlGeometry));
         }
 
-        foreach (var row in features.Select(x => CreateFeatureRow(table.NewRow(), x)))
+        foreach (var row in features
+                 .Select(x => CreateFeatureRow(table.NewRow(), x, fieldNameMappings)))
         {
             table.Rows.Add(row);
         }
@@ -177,11 +179,15 @@ WHERE name='{indexName}' AND object_id = OBJECT_ID('{objectId}')";
         return result is not null;
     }
 
-    private DataRow CreateFeatureRow(DataRow row, GeoJsonFeature feature)
+    private DataRow CreateFeatureRow(
+        DataRow row,
+        GeoJsonFeature feature,
+        IReadOnlyDictionary<string, string> fieldNameMappings)
     {
         foreach (var property in feature.Properties)
         {
-            row[property.Key] = GetDBValue(property.Value);
+            fieldNameMappings.TryGetValue(property.Key, out var propertyKeyMapping);
+            row[propertyKeyMapping ?? property.Key] = GetDBValue(property.Value);
         }
 
         if (feature?.Geometry?.Coordinates is not null)

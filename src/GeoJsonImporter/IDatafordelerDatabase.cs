@@ -10,6 +10,7 @@ internal interface IDatafordelerDatabase
     Task BulkImportGeoJsonFeatures(
         string tableName,
         IEnumerable<GeoJsonFeature> features,
+        IReadOnlyDictionary<string, string> fieldNameMappings,
         string? schemaName = null);
     Task CreateSpatialIndex(string tableName, string? schemaName);
     Task<bool> IndexExists(string indexName, string tableName, string? schemaName);

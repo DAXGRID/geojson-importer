@@ -16,11 +16,15 @@ internal sealed record ImportSetting
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; init; }
 
+    [JsonPropertyName("fieldNameMappings")]
+    public IReadOnlyDictionary<string, string> FieldNameMappings { get; init; }
+
     public ImportSetting(
         string tableName,
         string keyFieldName,
         string filePath,
-        string? schemaName)
+        string? schemaName,
+        Dictionary<string, string>? fieldNameMappings)
     {
         if (string.IsNullOrWhiteSpace(tableName))
         {
@@ -44,6 +48,7 @@ internal sealed record ImportSetting
         KeyFieldName = keyFieldName;
         FilePath = filePath;
         SchemaName = schemaName;
+        FieldNameMappings = fieldNameMappings ?? new();
     }
 }
 
