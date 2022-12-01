@@ -2,7 +2,7 @@
 
 Takes GeoJSON and imports it into whatever is supported. :) It handles features with and without `geometries`.
 
-Currently we only support Microsoft SQL-server, but PostgreSQL might is on the drawing board.
+Currently we only support Microsoft SQL-server, but PostgreSQL is on the drawing board.
 
 ## Testing
 
