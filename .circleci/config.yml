@@ -20,7 +20,6 @@ executors:
         password: $DOCKER_ACCESSTOKEN
       environment:
         SA_PASSWORD: myAwesomePassword1
-        MSSQL_AGENT_ENABLED: True
         ACCEPT_EULA: Y
 
 jobs:
