@@ -4,8 +4,6 @@ Takes GeoJSON and imports it into whatever is supported. :) It handles features 
 
 Currently we only support Microsoft SQL-server, but PostgreSQL might is on the drawing board.
 
-The only takes in data in the `GeoJSON` format.
-
 ## Testing
 
 ### Running test suite
