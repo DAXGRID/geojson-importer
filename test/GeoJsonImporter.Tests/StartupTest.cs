@@ -61,7 +61,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
             settings: settings,
             datafordelerDatabase: database);
 
-        await startup.StartAsync().ConfigureAwait(false);
+        await startup.StartAsync().ConfigureAwait(true);
 
         var columns = await RetrieveAllColumns(
             MsSqlDatabaseFixture.TestConnectionString,
@@ -75,7 +75,7 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
         var exists = await TableExists(
             MsSqlDatabaseFixture.TestConnectionString,
             "jordstykke_tmp",
-            "test_schema");
+            "test_schema").ConfigureAwait(true);
 
         exists.Should().BeFalse();
     }
@@ -88,9 +88,9 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
 
         var columns = new List<IReadOnlyDictionary<string, object>>();
 
-        await connection.OpenAsync();
-        using var reader = await cmd.ExecuteReaderAsync();
-        while (await reader.ReadAsync())
+        await connection.OpenAsync().ConfigureAwait(false);
+        using var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false);
+        while (await reader.ReadAsync().ConfigureAwait(false))
         {
             var column = new Dictionary<string, object>();
             for (var i = 0; i < reader.FieldCount; i++)

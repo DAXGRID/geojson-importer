@@ -24,7 +24,7 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
 
         await SetupDatabase(
             MasterConnectionString,
-            TestDatabaseName).ConfigureAwait(false);
+            TestDatabaseName).ConfigureAwait(true);
 
         await SetupSchema(TestConnectionString, TestDatabaseSchemaName);
     }
@@ -41,7 +41,7 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
         var createDatabaseSql = $"CREATE DATABASE {database}";
 
         using var connection = new SqlConnection(connectionString);
-        await connection.OpenAsync().ConfigureAwait(false);
+        await connection.OpenAsync().ConfigureAwait(true);
 
         new Server(new ServerConnection(connection))
             .ConnectionContext.ExecuteNonQuery(createDatabaseSql);
@@ -52,7 +52,7 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
         var createSchemaSql = $"CREATE SCHEMA {schemaName}";
 
         using var connection = new SqlConnection(connectionString);
-        await connection.OpenAsync().ConfigureAwait(false);
+        await connection.OpenAsync().ConfigureAwait(true);
 
         new Server(new ServerConnection(connection))
             .ConnectionContext.ExecuteNonQuery(createSchemaSql);
@@ -72,8 +72,8 @@ internal class MsSqlDatabaseFixture : IAsyncLifetime
         using var connection = new SqlConnection(connectionString);
         using var cmd = new SqlCommand(deleteDatabaseSql, connection);
 
-        await connection.OpenAsync().ConfigureAwait(false);
-        await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+        await connection.OpenAsync().ConfigureAwait(true);
+        await cmd.ExecuteNonQueryAsync().ConfigureAwait(true);
     }
 
     private static string CreateConnectionString(string initialCatalog)
