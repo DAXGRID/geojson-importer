@@ -19,13 +19,17 @@ internal sealed record ImportSetting
     [JsonPropertyName("fieldNameMappings")]
     public IReadOnlyDictionary<string, string> FieldNameMappings { get; init; }
 
+    [JsonPropertyName("entireDatasetPropertyScan")]
+    public bool EntireDatasetPropertyScan { get; init; }
+
     [JsonConstructor]
     public ImportSetting(
         string tableName,
         string keyFieldName,
         string filePath,
         string? schemaName,
-        IReadOnlyDictionary<string, string>? fieldNameMappings)
+        IReadOnlyDictionary<string, string>? fieldNameMappings,
+        bool entireDatasetPropertyScan = false)
     {
         if (string.IsNullOrWhiteSpace(tableName))
         {
@@ -50,6 +54,7 @@ internal sealed record ImportSetting
         FilePath = filePath;
         SchemaName = schemaName;
         FieldNameMappings = fieldNameMappings ?? new Dictionary<string, string>();
+        EntireDatasetPropertyScan = entireDatasetPropertyScan;
     }
 }
 

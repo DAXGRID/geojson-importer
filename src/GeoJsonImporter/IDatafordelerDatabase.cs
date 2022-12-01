@@ -8,10 +8,9 @@ internal interface IDatafordelerDatabase
     Task Merge(DynamicTableDescription target, DynamicTableDescription source);
     Task<bool> TableExists(string tableName, string? schemaName = null);
     Task BulkImportGeoJsonFeatures(
-        string tableName,
+        DynamicTableDescription tableDescription,
         IEnumerable<GeoJsonFeature> features,
-        IReadOnlyDictionary<string, string> fieldNameMappings,
-        string? schemaName = null);
+        IReadOnlyDictionary<string, string> fieldNameMappings);
     Task CreateSpatialIndex(string tableName, string? schemaName);
     Task<bool> IndexExists(string indexName, string tableName, string? schemaName);
 }

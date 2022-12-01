@@ -21,13 +21,15 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     tableName: "jordstykke",
                     keyFieldName: "id",
                     filePath: TestUtil.AbsolutePath("Data/jordstykke.geojson"),
-                    fieldNameMappings: null),
+                    fieldNameMappings: null
+                ),
                 new ImportSetting(
                     schemaName: "test_schema",
                     tableName: "postnummer",
                     keyFieldName: "nr",
                     filePath: TestUtil.AbsolutePath("Data/postnummer.geojson"),
-                    fieldNameMappings: null),
+                    fieldNameMappings: null
+                ),
                 new ImportSetting(
                     schemaName: "test_schema",
                     tableName: "adgangsadresse",
@@ -37,7 +39,18 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
                     {
                         { "adressepunktændringsdato", "dato" },
                         { "postnr", "postnummer" }
-                    })});
+                    }
+                ),
+                new ImportSetting(
+                    schemaName: "test_schema",
+                    tableName: "bebyggelse",
+                    keyFieldName: "gml_id",
+                    filePath: TestUtil.AbsolutePath("Data/bebyggelse.geojson"),
+                    fieldNameMappings: null,
+                    entireDatasetPropertyScan: true
+                )
+            }
+        );
 
         var database = new SqlServerDatafordelerDatabase(
             settings: settings,

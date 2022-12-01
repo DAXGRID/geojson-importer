@@ -84,10 +84,9 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
     }
 
     public async Task BulkImportGeoJsonFeatures(
-        string tableName,
+        DynamicTableDescription tableDescription,
         IEnumerable<GeoJsonFeature> features,
-        IReadOnlyDictionary<string, string> fieldNameMappings,
-        string? schemaName)
+        IReadOnlyDictionary<string, string> fieldNameMappings)
     {
         if (features is null || !features.Any())
         {
@@ -96,18 +95,19 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         }
 
         using var table = new DataTable();
-        table.TableName = tableName;
+        table.TableName = tableDescription.Name;
 
-        var exampleFeature = features.First();
-        foreach (var property in features.First().Properties)
+        foreach (var property in tableDescription.Columns)
         {
-            fieldNameMappings.TryGetValue(property.Key, out var propertyKeyMapping);
-            table.Columns.Add(propertyKeyMapping ?? property.Key, typeof(string));
-        }
+            var columnType = property.ColumnType switch
+            {
+                ColumnType.Geometry => typeof(SqlGeometry),
+                _ => typeof(string)
+            };
 
-        if (exampleFeature.Geometry is not null)
-        {
-            table.Columns.Add("coord", typeof(SqlGeometry));
+            fieldNameMappings.TryGetValue(property.Name, out var propertyKeyMapping);
+
+            table.Columns.Add(propertyKeyMapping ?? property.Name, columnType);
         }
 
         foreach (var row in features
@@ -119,9 +119,9 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         using var connection = new SqlConnection(_settings.ConnectionString);
 
         using var bulkInsert = new SqlBulkCopy(connection);
-        bulkInsert.DestinationTableName = schemaName is not null
-            ? $"[{schemaName}].[{tableName}]"
-            : $"[{tableName}]";
+        bulkInsert.DestinationTableName = tableDescription.Schema is not null
+            ? $"[{tableDescription.Schema}].[{tableDescription.Name}]"
+            : $"[{tableDescription.Name}]";
 
         await connection.OpenAsync().ConfigureAwait(false);
         await bulkInsert.WriteToServerAsync(table).ConfigureAwait(false);

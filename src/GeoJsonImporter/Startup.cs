@@ -25,14 +25,24 @@ internal class Startup
         {
             _logger.LogInformation("Starting import of {TableName}.", import.TableName);
 
-            var exampleFeature = StreamGeoJson.FirstGeoJsonFeature(import.FilePath);
+            var primaryTableDescription = import.EntireDatasetPropertyScan
+                ? DynamicTableDescriptionFactory.Create(
+                    import.SchemaName,
+                    import.TableName,
+                    import.KeyFieldName,
+                    StreamGeoJson.StreamFeaturesFile(import.FilePath),
+                    import.FieldNameMappings)
+                : DynamicTableDescriptionFactory.Create(
+                    import.SchemaName,
+                    import.TableName,
+                    import.KeyFieldName,
+                    StreamGeoJson.FirstGeoJsonFeature(import.FilePath),
+                    import.FieldNameMappings);
 
-            var primaryTableDescription = DynamicTableDescriptionFactory.Create(
-                import.SchemaName,
-                import.TableName,
-                import.KeyFieldName,
-                exampleFeature,
-                import.FieldNameMappings);
+            var temporaryTableDescription = primaryTableDescription with
+            {
+                Name = $"{import.TableName}_tmp"
+            };
 
             var primaryTableExists = await _datafordelerDatabase.TableExists(
                 import.TableName, import.SchemaName).ConfigureAwait(false);
@@ -44,14 +54,6 @@ internal class Startup
                     .ConfigureAwait(false);
             }
 
-            var temporaryTableName = $"{import.TableName}_tmp";
-            var temporaryTableDescription = DynamicTableDescriptionFactory.Create(
-                import.SchemaName,
-                temporaryTableName,
-                import.KeyFieldName,
-                exampleFeature,
-                import.FieldNameMappings);
-
             var temporaryTableExists = await _datafordelerDatabase
                 .TableExists(temporaryTableDescription.Name,
                              temporaryTableDescription.Schema)
@@ -59,7 +61,10 @@ internal class Startup
 
             if (temporaryTableExists)
             {
-                _logger.LogInformation("Deleting table {TableName}.", temporaryTableName);
+                _logger.LogInformation(
+                    "Deleting table {TableName}.",
+                    temporaryTableDescription.Name);
+
                 await _datafordelerDatabase
                     .DeleteTable(
                         temporaryTableDescription.Name,
@@ -67,7 +72,10 @@ internal class Startup
                     .ConfigureAwait(false);
             }
 
-            _logger.LogInformation("Creating table {TableName}.", temporaryTableName);
+            _logger.LogInformation(
+                "Creating table {TableName}.",
+                temporaryTableDescription.Name);
+
             await _datafordelerDatabase.CreateTable(temporaryTableDescription)
                 .ConfigureAwait(false);
 
@@ -79,14 +87,13 @@ internal class Startup
                     _logger.LogInformation(
                         "Bulk inserting {Count} into {TableName}",
                         features.Count,
-                        temporaryTableName);
+                        temporaryTableDescription.Name);
 
                     await _datafordelerDatabase
                         .BulkImportGeoJsonFeatures(
-                            temporaryTableName,
+                            temporaryTableDescription,
                             features,
-                            import.FieldNameMappings,
-                            temporaryTableDescription.Schema)
+                            import.FieldNameMappings)
                         .ConfigureAwait(false);
 
                     features.Clear();
@@ -103,14 +110,13 @@ internal class Startup
                 _logger.LogInformation(
                     "Bulk inserting {Count} into {TableName}",
                     features.Count,
-                    temporaryTableName);
+                    temporaryTableDescription.Name);
 
                 await _datafordelerDatabase
                     .BulkImportGeoJsonFeatures(
-                        temporaryTableName,
+                        temporaryTableDescription,
                         features,
-                        import.FieldNameMappings,
-                        temporaryTableDescription.Schema)
+                        import.FieldNameMappings)
                     .ConfigureAwait(false);
             }
 

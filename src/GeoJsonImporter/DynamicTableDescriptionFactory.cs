@@ -17,6 +17,44 @@ internal static class DynamicTableDescriptionFactory
                 geoJsonFeature, key, fieldNameMappings));
     }
 
+    public static DynamicTableDescription Create(
+        string? schema,
+        string tableName,
+        string key,
+        IEnumerable<GeoJsonFeature> geoJsonFeatures,
+        IReadOnlyDictionary<string, string> fieldNameMappings)
+    {
+        return new DynamicTableDescription(
+            schema: schema,
+            key: key,
+            name: tableName,
+            columns: CreateDynamicColumnDescription(
+                geoJsonFeatures, key, fieldNameMappings));
+    }
+
+    private static IEnumerable<DynamicColumnDescription> CreateDynamicColumnDescription(
+        IEnumerable<GeoJsonFeature> features,
+        string primaryKeyFieldName,
+        IReadOnlyDictionary<string, string> fieldMappings)
+    {
+        var properties = new Dictionary<string, DynamicColumnDescription>();
+
+        foreach (var feature in features)
+        {
+            var columnDescriptions = CreateDynamicColumnDescription(
+                feature,
+                primaryKeyFieldName,
+                fieldMappings);
+
+            foreach (var columnDescription in columnDescriptions)
+            {
+                properties.TryAdd(columnDescription.Name, columnDescription);
+            }
+        }
+
+        return properties.Select(x => x.Value);
+    }
+
     private static IEnumerable<DynamicColumnDescription> CreateDynamicColumnDescription(
         GeoJsonFeature feature,
         string primaryKeyFieldName,
