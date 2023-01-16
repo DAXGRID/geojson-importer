@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
+using System.Globalization;
 using System.Text.Json;
 
 namespace GeoJsonImporter;
@@ -29,7 +30,7 @@ internal sealed class Program
             .MinimumLevel.Information()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
             .MinimumLevel.Override("System", LogEventLevel.Warning)
-            .WriteTo.Console()
+            .WriteTo.Console(formatProvider: CultureInfo.CurrentCulture)
             .CreateLogger();
 
         var settingsJson = JsonDocument.Parse(File.ReadAllText("appsettings.json"))
