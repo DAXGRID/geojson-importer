@@ -88,7 +88,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
     public async Task BulkImportGeoJsonFeatures(
         DynamicTableDescription tableDescription,
-        IEnumerable<GeoJsonFeature> features,
+        IReadOnlyList<GeoJsonFeature> features,
         IReadOnlyDictionary<string, string> fieldNameMappings)
     {
         if (features is null || !features.Any())
