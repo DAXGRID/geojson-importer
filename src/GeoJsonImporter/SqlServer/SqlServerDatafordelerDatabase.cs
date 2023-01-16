@@ -25,6 +25,8 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         using var connection = new SqlConnection(_settings.ConnectionString);
         using var cmd = new SqlCommand(sql, connection);
 
+        cmd.CommandTimeout = 60 * 60; // 60 seconds * 60 minutes = 1 hour timeout
+
         await connection.OpenAsync().ConfigureAwait(false);
         await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
     }
