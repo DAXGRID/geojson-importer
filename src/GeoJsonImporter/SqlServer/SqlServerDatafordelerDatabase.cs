@@ -9,6 +9,7 @@ namespace GeoJsonImporter.SqlServer;
 
 internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 {
+    private const int DEFAULT_COMMAND_TIMEOUT = 60 * 60;
     private readonly Settings _settings;
     private readonly ILogger<SqlServerDatafordelerDatabase> _logger;
 
@@ -25,7 +26,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
         using var connection = new SqlConnection(_settings.ConnectionString);
         using var cmd = new SqlCommand(sql, connection);
 
-        cmd.CommandTimeout = 60 * 60; // 60 seconds * 60 minutes = 1 hour timeout
+        cmd.CommandTimeout = DEFAULT_COMMAND_TIMEOUT;
 
         await connection.OpenAsync().ConfigureAwait(false);
         await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
@@ -62,7 +63,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
         using var connection = new SqlConnection(_settings.ConnectionString);
         using var cmd = new SqlCommand(sql, connection);
-        cmd.CommandTimeout = 60 * 10;
+        cmd.CommandTimeout = DEFAULT_COMMAND_TIMEOUT;
 
         await connection.OpenAsync().ConfigureAwait(false);
         await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
@@ -151,7 +152,7 @@ internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
 
         using var connection = new SqlConnection(_settings.ConnectionString);
         using var cmd = new SqlCommand(sql, connection);
-        cmd.CommandTimeout = 60 * 10;
+        cmd.CommandTimeout = DEFAULT_COMMAND_TIMEOUT;
 
         await connection.OpenAsync().ConfigureAwait(false);
         await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
