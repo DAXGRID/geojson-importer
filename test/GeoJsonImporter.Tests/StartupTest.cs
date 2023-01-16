@@ -52,9 +52,9 @@ public sealed class StartupTest : IClassFixture<MsSqlDatabaseFixture>
             }
         );
 
-        var database = new SqlServerDatafordelerDatabase(
+        var database = new SqlServerDatabase(
             settings: settings,
-            logger: new NullLogger<SqlServerDatafordelerDatabase>());
+            logger: new NullLogger<SqlServerDatabase>());
 
         var startup = new Startup(
             logger: new NullLogger<Startup>(),

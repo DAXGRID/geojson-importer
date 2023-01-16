@@ -7,15 +7,15 @@ using System.Globalization;
 
 namespace GeoJsonImporter.SqlServer;
 
-internal sealed class SqlServerDatafordelerDatabase : IDatafordelerDatabase
+internal sealed class SqlServerDatabase : IDatafordelerDatabase
 {
     private const int DEFAULT_COMMAND_TIMEOUT = 60 * 60;
     private readonly Settings _settings;
-    private readonly ILogger<SqlServerDatafordelerDatabase> _logger;
+    private readonly ILogger<SqlServerDatabase> _logger;
 
-    public SqlServerDatafordelerDatabase(
+    public SqlServerDatabase(
         Settings settings,
-        ILogger<SqlServerDatafordelerDatabase> logger)
+        ILogger<SqlServerDatabase> logger)
     {
         _settings = settings;
         _logger = logger;

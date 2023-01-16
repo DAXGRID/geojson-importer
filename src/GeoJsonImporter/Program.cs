@@ -46,7 +46,7 @@ internal sealed class Program
            })
            .AddSingleton<Settings>(settings)
            .AddSingleton<Startup>()
-           .AddSingleton<IDatafordelerDatabase, SqlServerDatafordelerDatabase>()
+           .AddSingleton<IDatafordelerDatabase, SqlServerDatabase>()
            .BuildServiceProvider();
     }
 }
