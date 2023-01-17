@@ -1,8 +1,8 @@
 ﻿using GeoJsonImporter.SqlServer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
-using System.Globalization;
 using System.Text.Json;
 
 namespace GeoJsonImporter;
@@ -26,14 +26,20 @@ internal sealed class Program
 
     private static ServiceProvider BuildServiceProvider()
     {
+        const string APP_SETTINGS_FILE_NAME = "appsettings.json";
+
+        var loggingConfiguration = new ConfigurationBuilder()
+            .AddJsonFile(APP_SETTINGS_FILE_NAME)
+            .Build();
+
         var logger = new LoggerConfiguration()
-            .MinimumLevel.Information()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
             .MinimumLevel.Override("System", LogEventLevel.Warning)
-            .WriteTo.Console(formatProvider: CultureInfo.CurrentCulture)
+            .ReadFrom.Configuration(loggingConfiguration)
+            .Enrich.FromLogContext()
             .CreateLogger();
 
-        var settingsJson = JsonDocument.Parse(File.ReadAllText("appsettings.json"))
+        var settingsJson = JsonDocument.Parse(File.ReadAllText(APP_SETTINGS_FILE_NAME))
             .RootElement.GetProperty("settings").ToString();
 
         var settings = JsonSerializer.Deserialize<Settings>(settingsJson) ??
