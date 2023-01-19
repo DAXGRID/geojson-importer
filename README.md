@@ -11,7 +11,7 @@ By default it looks for the `appsettings.json` file in same folder as the binary
 Example:
 
 ```sh
-dotnet run "/home/my_user/appsettings.json"
+./my_executeable "/home/my_user/appsettings.json"
 ```
 
 ## Testing
