@@ -4,6 +4,16 @@ Takes GeoJSON and imports it into whatever is supported. :) It handles features 
 
 Currently we only support Microsoft SQL-server, but PostgreSQL is on the drawing board.
 
+## Note
+
+By default it looks for the `appsettings.json` file in same folder as the binary file. This can be overwritten by calling the binary file with a full path to the file.
+
+Example:
+
+```sh
+dotnet run "/home/my_user/appsettings.json"
+```
+
 ## Testing
 
 ### Running test suite

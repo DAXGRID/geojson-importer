@@ -9,20 +9,25 @@ namespace GeoJsonImporter;
 
 internal sealed class Program
 {
-    public static async Task Main()
+    public static async Task Main(string[] args)
     {
-        using var serviceProvider = BuildServiceProvider();
+        var appSettingsFilePath = "appsettings.json";
+
+        if (args.Length == 1)
+        {
+            appSettingsFilePath = args[0];
+        }
+
+        using var serviceProvider = BuildServiceProvider(appSettingsFilePath);
         var startup = serviceProvider.GetService<Startup>();
 
         await startup!.StartAsync().ConfigureAwait(false);
     }
 
-    private static ServiceProvider BuildServiceProvider()
+    private static ServiceProvider BuildServiceProvider(string appSettingsFilePath)
     {
-        const string APP_SETTINGS_FILE_NAME = "appsettings.json";
-
         var loggingConfiguration = new ConfigurationBuilder()
-            .AddJsonFile(APP_SETTINGS_FILE_NAME)
+            .AddJsonFile(appSettingsFilePath)
             .Build();
 
         var logger = new LoggerConfiguration()
@@ -32,7 +37,7 @@ internal sealed class Program
             .Enrich.FromLogContext()
             .CreateLogger();
 
-        var settingsJson = JsonDocument.Parse(File.ReadAllText(APP_SETTINGS_FILE_NAME))
+        var settingsJson = JsonDocument.Parse(File.ReadAllText(appSettingsFilePath))
             .RootElement.GetProperty("settings").ToString();
 
         var settings = JsonSerializer.Deserialize<Settings>(settingsJson) ??
