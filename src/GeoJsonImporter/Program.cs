@@ -1,6 +1,7 @@
 ﻿using GeoJsonImporter.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 using System.Text.Json;
@@ -19,9 +20,19 @@ internal sealed class Program
         }
 
         using var serviceProvider = BuildServiceProvider(appSettingsFilePath);
+        var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+        var logger = loggerFactory!.CreateLogger(nameof(Program));
         var startup = serviceProvider.GetService<Startup>();
 
-        await startup!.StartAsync().ConfigureAwait(false);
+        try
+        {
+            await startup!.StartAsync().ConfigureAwait(true);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("{Exception}", ex);
+            throw;
+        }
     }
 
     private static ServiceProvider BuildServiceProvider(string appSettingsFilePath)
